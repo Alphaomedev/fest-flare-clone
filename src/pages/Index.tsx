@@ -4,42 +4,10 @@ import EventCard from "@/components/EventCard";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
+import { getFeaturedEvents } from "@/utils/eventUtils";
 
 const Index = () => {
-  const highlightedEvents = [
-    {
-      title: "Hackathon: Tech for Tomorrow",
-      time: "Day 1: 12:00 AM (Online), Day 2: 10:00 AM - 3:00 PM",
-      mode: "Online & Offline",
-      team: "1-4 members",
-      regFee: "₹250/team",
-      prize: "₹3000 + Certificates",
-      openToAll: true,
-      icon: "computer" as const,
-      description: "Join our innovative hackathon to solve real-world problems with technology.",
-    },
-    {
-      title: "Photography Contest",
-      time: "9:00 AM - 2:30 PM",
-      mode: "Offline",
-      team: "Solo",
-      regFee: "₹50",
-      prize: "₹500 + Insta Feature",
-      openToAll: true,
-      icon: "camera" as const,
-      description: "Capture the essence of the fest with your photography skills.",
-    },
-    {
-      title: "Quiz Competition",
-      time: "10:30 AM - 3:00 PM",
-      team: "2 members",
-      regFee: "₹30/team",
-      prize: "₹1000 + Certificates",
-      openToAll: true,
-      icon: "quiz" as const,
-      description: "Test your knowledge across various categories in this exciting quiz.",
-    },
-  ];
+  const highlightedEvents = getFeaturedEvents();
 
   return (
     <div className="min-h-screen">
@@ -58,7 +26,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
             {highlightedEvents.map((event, index) => (
               <motion.div
-                key={index}
+                key={event.id || index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}

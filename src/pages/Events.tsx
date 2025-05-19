@@ -2,144 +2,16 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import EventCard, { EventProps } from "@/components/EventCard";
+import EventCard from "@/components/EventCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { motion } from "framer-motion";
+import { getDay1Events, getDay2Events } from "@/utils/eventUtils";
 
 const Events = () => {
   const [filter, setFilter] = useState<"all" | "open" | "closed">("all");
 
-  const day1Events: EventProps[] = [
-    {
-      title: "Ribbon Cutting Ceremony",
-      time: "9:30 AM",
-      type: "Formal",
-      openToAll: true,
-      icon: "ribbon",
-      description: "The official inauguration ceremony of the fest.",
-    },
-    {
-      title: "Talents Day",
-      time: "10:00 AM – 11:30 AM",
-      mode: "Offline",
-      team: "Solo/Group",
-      openToAll: false,
-      icon: "microphone",
-      description: "BCA Students Only - Showcase your talent through dance, music, or any performing art.",
-    },
-    {
-      title: "Video Shoot Competition",
-      time: "10:00 AM – 2:00 PM",
-      mode: "Offline",
-      team: "2 members",
-      regFee: "₹50/team",
-      prize: "₹500",
-      openToAll: false,
-      icon: "video",
-      description: "SDM Students Only - Create a short video showcasing SDM college.",
-    },
-    {
-      title: "Craft Competition",
-      time: "10:45 AM – 1:15 PM",
-      mode: "Offline",
-      team: "Solo or Team",
-      regFee: "₹30",
-      prize: "Gift hamper",
-      openToAll: false,
-      icon: "scissors",
-      description: "SDM Students Only - Create art using recycled materials or festive decorations.",
-    },
-    {
-      title: "Hackathon: Tech for Tomorrow",
-      time: "12:00 AM (Online via Google Meet)",
-      mode: "Online & Offline",
-      team: "1-4 members",
-      regFee: "₹250/team",
-      prize: "₹3000 + Certificates",
-      openToAll: true,
-      icon: "computer",
-      description: "Day 1 Ideation - Develop tech solutions for chosen themes.",
-    },
-    {
-      title: "Free Fire Tournament",
-      time: "1:30 PM – 3:00 PM",
-      team: "Squad of 4",
-      regFee: "₹100/team",
-      prize: "₹2000 + Trophy",
-      openToAll: false,
-      icon: "gamepad",
-      description: "SDM Students Only - Battle in teams in this exciting esports tournament.",
-    },
-    {
-      title: "Treasure Hunt",
-      time: "3:00 PM onwards",
-      team: "6 members",
-      openToAll: false,
-      icon: "mapPin",
-      description: "BCA Students Only - Follow clues around campus to find the hidden treasure.",
-    },
-  ];
-
-  const day2Events: EventProps[] = [
-    {
-      title: "Formal Inauguration",
-      time: "9:30 AM – 10:00 AM",
-      openToAll: true,
-      icon: "microphone",
-      description: "The official opening ceremony for the main day of the fest.",
-    },
-    {
-      title: "Photography Contest",
-      time: "9:00 AM – 2:30 PM",
-      regFee: "₹50",
-      prize: "₹500 + Insta Feature",
-      openToAll: true,
-      icon: "camera",
-      description: "Capture the essence of the fest through your lens.",
-    },
-    {
-      title: "Hackathon (Build Phase)",
-      time: "10:00 AM – 3:00 PM",
-      openToAll: true,
-      icon: "computer",
-      description: "Day 2 Build Phase - Implement your solutions and prepare for final presentations.",
-    },
-    {
-      title: "Quiz Competition",
-      time: "10:30 AM – 3:00 PM",
-      team: "2 members",
-      regFee: "₹30/team",
-      prize: "₹1000 + Certificates",
-      openToAll: true,
-      icon: "quiz",
-      description: "Test your knowledge across various categories in this exciting quiz.",
-    },
-    {
-      title: "Canva Design Challenge",
-      time: "10:30 AM – 1:30 PM",
-      team: "2 members",
-      regFee: "₹50/team",
-      prize: "₹500 + Certificates",
-      openToAll: true,
-      icon: "canva",
-      description: "Showcase your graphic design skills using Canva.",
-    },
-    {
-      title: "Game Stalls",
-      time: "Throughout Day 2",
-      regFee: "₹10-₹30 per game",
-      openToAll: true,
-      icon: "gamepad",
-      description: "Enjoy various fun games and activities throughout the day.",
-    },
-    {
-      title: "Food Stalls",
-      time: "All Day",
-      openToAll: true,
-      icon: "food",
-      description: "A variety of food options available throughout the day.",
-    },
-  ];
+  const day1Events = getDay1Events();
+  const day2Events = getDay2Events();
 
   const filteredDay1 = filter === "all" 
     ? day1Events 
@@ -211,7 +83,7 @@ const Events = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredDay1.map((event, index) => (
                 <motion.div 
-                  key={index}
+                  key={event.id || index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -235,7 +107,7 @@ const Events = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredDay2.map((event, index) => (
                 <motion.div 
-                  key={index}
+                  key={event.id || index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
