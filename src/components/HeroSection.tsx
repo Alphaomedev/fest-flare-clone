@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import CountdownTimer from '@/components/CountdownTimer';
 import { motion } from 'framer-motion';
-import { Star, Music, Code, Trophy, Camera, Zap, Sparkles, Heart, Gift, Award } from 'lucide-react';
+import { Code } from 'lucide-react';
 
 const HeroSection = () => {
-  const floatingIcons = [Star, Music, Code, Trophy, Camera, Zap, Sparkles, Heart, Gift, Award];
+  const floatingIcons = new Array(10).fill(Code);
   
   return (
     <div className="min-h-screen flex items-center relative overflow-hidden pt-24 pb-16">
@@ -79,7 +79,7 @@ const HeroSection = () => {
       </div>
       
       {/* Shooting Stars */}
-      {[...Array(5)].map((_, i) => (
+      {[...Array(10)].map((_, i) => (
         <motion.div
           key={`star-${i}`}
           className="absolute h-px bg-white"

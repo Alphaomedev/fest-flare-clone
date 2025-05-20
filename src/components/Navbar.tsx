@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <span className="text-2xl font-bold text-white uppercase tracking-wider">
-            MOON<span className="text-enigma-pink">STONE</span>
+            ENI<span className="text-enigma-pink">GMA*</span>
           </span>
         </Link>
 
