@@ -20,10 +20,12 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
+import { supabase } from "@/integrations/supabase/client";
 
 const Register = () => {
   const { toast } = useToast();
   const [step, setStep] = useState(1);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -84,7 +86,7 @@ const Register = () => {
     setStep(step - 1);
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validate form
@@ -106,28 +108,69 @@ const Register = () => {
       return;
     }
     
-    // Registration logic would go here
-    console.log("Registration submitted:", formData);
+    setIsSubmitting(true);
     
-    toast({
-      title: "Registration Successful!",
-      description: "Thank you for registering for MOONSTONE Fest. Check your email for confirmation.",
-    });
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      college: "",
-      department: "",
-      year: "",
-      events: [],
-      agreeToTerms: false
-    });
-    
-    // Reset to step 1
-    setStep(1);
+    try {
+      // Insert registration data
+      const { data: registrationData, error: registrationError } = await supabase
+        .from('registrations')
+        .insert({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          college: formData.college || null,
+          department: formData.department || null,
+          year: formData.year || null
+        })
+        .select()
+        .single();
+        
+      if (registrationError) {
+        throw new Error(registrationError.message);
+      }
+      
+      // Insert event selections
+      const eventPromises = formData.events.map(eventId => {
+        return supabase
+          .from('registration_events')
+          .insert({
+            registration_id: registrationData.id,
+            event_id: eventId
+          });
+      });
+      
+      await Promise.all(eventPromises);
+      
+      toast({
+        title: "Registration Successful!",
+        description: "Thank you for registering for MOONSTONE Fest. Check your email for confirmation.",
+      });
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        college: "",
+        department: "",
+        year: "",
+        events: [],
+        agreeToTerms: false
+      });
+      
+      // Reset to step 1
+      setStep(1);
+      
+    } catch (error) {
+      toast({
+        title: "Registration Failed",
+        description: error instanceof Error ? error.message : "An unexpected error occurred",
+        variant: "destructive"
+      });
+      console.error("Registration error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -360,9 +403,9 @@ const Register = () => {
                       <Button 
                         type="submit"
                         className="bg-gradient-to-r from-moonstone-pink to-moonstone-teal text-white ml-auto"
-                        disabled={formData.events.length === 0 || !formData.agreeToTerms}
+                        disabled={formData.events.length === 0 || !formData.agreeToTerms || isSubmitting}
                       >
-                        Submit Registration
+                        {isSubmitting ? "Submitting..." : "Submit Registration"}
                       </Button>
                     )}
                   </div>
