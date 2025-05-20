@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,9 +17,11 @@ import {
 } from "@/components/ui/card";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { motion } from "framer-motion";
 import { supabase } from "@/integrations/supabase/client";
+import { PlusCircle, MinusCircle } from "lucide-react";
 
 const Register = () => {
   const { toast } = useToast();
@@ -34,15 +35,16 @@ const Register = () => {
     department: "",
     year: "",
     events: [] as string[],
+    teammates: {} as Record<string, string[]>,
     agreeToTerms: false
   });
   
   const events = [
-    { id: "hackathon", name: "Hackathon: Tech for Tomorrow", fee: "₹250/team" },
-    { id: "photography", name: "Photography Contest", fee: "₹50" },
-    { id: "quiz", name: "Quiz Competition", fee: "₹30/team" },
-    { id: "canva", name: "Canva Design Challenge", fee: "₹50/team" },
-    { id: "games", name: "Game Stalls", fee: "Pay per game" },
+    { id: "hackathon", name: "Hackathon: Tech for Tomorrow", fee: "₹250/team", isTeamEvent: true, maxTeamSize: 4 },
+    { id: "photography", name: "Photography Contest", fee: "₹50", isTeamEvent: false },
+    { id: "quiz", name: "Quiz Competition", fee: "₹30/team", isTeamEvent: true, maxTeamSize: 2 },
+    { id: "canva", name: "Canva Design Challenge", fee: "₹50/team", isTeamEvent: true, maxTeamSize: 2 },
+    { id: "games", name: "Game Stalls", fee: "Pay per game", isTeamEvent: false },
   ];
   
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,12 +57,89 @@ const Register = () => {
   };
   
   const handleCheckboxChange = (checked: boolean, eventId: string) => {
+    const updatedEvents = checked
+      ? [...formData.events, eventId]
+      : formData.events.filter(id => id !== eventId);
+    
+    // Initialize teammates array for team events when checked
+    const updatedTeammates = { ...formData.teammates };
+    
+    if (checked) {
+      const event = events.find(e => e.id === eventId);
+      if (event?.isTeamEvent) {
+        updatedTeammates[eventId] = [""];
+      }
+    } else {
+      // Remove teammates data if event is unchecked
+      delete updatedTeammates[eventId];
+    }
+    
     setFormData((prev) => ({
       ...prev,
-      events: checked
-        ? [...prev.events, eventId]
-        : prev.events.filter(id => id !== eventId)
+      events: updatedEvents,
+      teammates: updatedTeammates
     }));
+  };
+  
+  const handleTeammateChange = (eventId: string, index: number, value: string) => {
+    const updatedTeammates = { ...formData.teammates };
+    
+    if (!updatedTeammates[eventId]) {
+      updatedTeammates[eventId] = [];
+    }
+    
+    updatedTeammates[eventId][index] = value;
+    
+    setFormData(prev => ({
+      ...prev,
+      teammates: updatedTeammates
+    }));
+  };
+  
+  const addTeammate = (eventId: string) => {
+    const event = events.find(e => e.id === eventId);
+    if (!event) return;
+    
+    const updatedTeammates = { ...formData.teammates };
+    
+    if (!updatedTeammates[eventId]) {
+      updatedTeammates[eventId] = [""];
+    } else if (updatedTeammates[eventId].length < (event.maxTeamSize - 1)) {
+      updatedTeammates[eventId].push("");
+    } else {
+      toast({
+        title: "Maximum team size reached",
+        description: `Maximum team size for ${event.name} is ${event.maxTeamSize} (including you)`,
+        variant: "destructive"
+      });
+      return;
+    }
+    
+    setFormData(prev => ({
+      ...prev,
+      teammates: updatedTeammates
+    }));
+  };
+  
+  const removeTeammate = (eventId: string, index: number) => {
+    const updatedTeammates = { ...formData.teammates };
+    
+    if (updatedTeammates[eventId] && updatedTeammates[eventId].length > 1) {
+      updatedTeammates[eventId].splice(index, 1);
+      
+      setFormData(prev => ({
+        ...prev,
+        teammates: updatedTeammates
+      }));
+    } else if (updatedTeammates[eventId] && updatedTeammates[eventId].length === 1) {
+      // Keep at least one empty input
+      updatedTeammates[eventId] = [""];
+      
+      setFormData(prev => ({
+        ...prev,
+        teammates: updatedTeammates
+      }));
+    }
   };
   
   const handleTermsChange = (checked: boolean) => {
@@ -108,6 +187,23 @@ const Register = () => {
       return;
     }
     
+    // Validate teammates for team events
+    const teamEventsWithMissingTeammates = formData.events
+      .filter(eventId => {
+        const event = events.find(e => e.id === eventId);
+        return event?.isTeamEvent && (!formData.teammates[eventId] || formData.teammates[eventId].some(name => !name.trim()));
+      })
+      .map(eventId => events.find(e => e.id === eventId)?.name);
+    
+    if (teamEventsWithMissingTeammates.length > 0) {
+      toast({
+        title: "Missing Teammate Information",
+        description: `Please enter names for all teammates in: ${teamEventsWithMissingTeammates.join(', ')}`,
+        variant: "destructive"
+      });
+      return;
+    }
+    
     setIsSubmitting(true);
     
     try {
@@ -129,13 +225,17 @@ const Register = () => {
         throw new Error(registrationError.message);
       }
       
-      // Insert event selections
+      // Insert event selections with teammate information
       const eventPromises = formData.events.map(eventId => {
+        const teammateNames = formData.teammates[eventId] || [];
+        const teammateData = teammateNames.filter(name => name.trim()).join(', ');
+        
         return supabase
           .from('registration_events')
           .insert({
             registration_id: registrationData.id,
-            event_id: eventId
+            event_id: eventId,
+            teammates: teammateData || null
           });
       });
       
@@ -155,6 +255,7 @@ const Register = () => {
         department: "",
         year: "",
         events: [],
+        teammates: {},
         agreeToTerms: false
       });
       
@@ -304,22 +405,69 @@ const Register = () => {
                       
                       <div className="space-y-4">
                         {events.map((event) => (
-                          <div key={event.id} className="flex items-start space-x-3 p-3 bg-moonstone-purple/30 rounded-md border border-moonstone-purple/40">
-                            <Checkbox 
-                              id={event.id} 
-                              checked={formData.events.includes(event.id)}
-                              onCheckedChange={(checked) => handleCheckboxChange(checked as boolean, event.id)}
-                              className="mt-1"
-                            />
-                            <div className="flex-1">
-                              <label 
-                                htmlFor={event.id} 
-                                className="text-white font-medium cursor-pointer"
-                              >
-                                {event.name}
-                              </label>
-                              <p className="text-sm text-gray-400">Registration Fee: {event.fee}</p>
+                          <div key={event.id}>
+                            <div className="flex items-start space-x-3 p-3 bg-moonstone-purple/30 rounded-md border border-moonstone-purple/40">
+                              <Checkbox 
+                                id={event.id} 
+                                checked={formData.events.includes(event.id)}
+                                onCheckedChange={(checked) => handleCheckboxChange(checked as boolean, event.id)}
+                                className="mt-1"
+                              />
+                              <div className="flex-1">
+                                <label 
+                                  htmlFor={event.id} 
+                                  className="text-white font-medium cursor-pointer"
+                                >
+                                  {event.name}
+                                </label>
+                                <p className="text-sm text-gray-400">
+                                  Registration Fee: {event.fee}
+                                  {event.isTeamEvent && " • Team Event"}
+                                </p>
+                              </div>
                             </div>
+                            
+                            {/* Teammate inputs for team events */}
+                            {event.isTeamEvent && formData.events.includes(event.id) && (
+                              <div className="pl-8 mt-2 space-y-2">
+                                <p className="text-sm text-moonstone-pink font-medium">Add Teammate Names:</p>
+                                
+                                {(formData.teammates[event.id] || [""]).map((teammate, index) => (
+                                  <div key={`${event.id}-teammate-${index}`} className="flex items-center space-x-2">
+                                    <Input
+                                      value={teammate}
+                                      onChange={(e) => handleTeammateChange(event.id, index, e.target.value)}
+                                      placeholder={`Teammate ${index + 1} Name`}
+                                      className="bg-moonstone-purple/30 border-moonstone-purple/40 text-white placeholder-gray-400"
+                                    />
+                                    <Button
+                                      type="button"
+                                      variant="ghost"
+                                      size="icon"
+                                      onClick={() => removeTeammate(event.id, index)}
+                                    >
+                                      <MinusCircle className="h-5 w-5 text-moonstone-pink" />
+                                    </Button>
+                                  </div>
+                                ))}
+                                
+                                {formData.teammates[event.id] && formData.teammates[event.id].length < (event.maxTeamSize - 1) && (
+                                  <Button
+                                    type="button"
+                                    variant="outline"
+                                    size="sm"
+                                    onClick={() => addTeammate(event.id)}
+                                    className="flex items-center mt-1 text-sm border-moonstone-pink/50 text-moonstone-pink hover:bg-moonstone-pink/10"
+                                  >
+                                    <PlusCircle className="h-4 w-4 mr-1" /> Add Teammate
+                                  </Button>
+                                )}
+                                
+                                <p className="text-xs text-gray-400">
+                                  Team Size: Maximum {event.maxTeamSize} members (including you)
+                                </p>
+                              </div>
+                            )}
                           </div>
                         ))}
                       </div>
@@ -348,14 +496,30 @@ const Register = () => {
                       <div>
                         <h3 className="text-white font-medium mb-2">Selected Events</h3>
                         {formData.events.length > 0 ? (
-                          <div className="bg-moonstone-purple/30 p-3 rounded-md border border-moonstone-purple/40">
-                            <ul className="list-disc list-inside space-y-1">
-                              {formData.events.map((eventId) => (
-                                <li key={eventId} className="text-gray-300">
-                                  {events.find(e => e.id === eventId)?.name}
-                                </li>
-                              ))}
-                            </ul>
+                          <div className="bg-moonstone-purple/30 p-3 rounded-md border border-moonstone-purple/40 divide-y divide-moonstone-purple/30">
+                            {formData.events.map((eventId) => {
+                              const event = events.find(e => e.id === eventId);
+                              return (
+                                <div key={eventId} className="py-2 first:pt-0 last:pb-0">
+                                  <p className="text-gray-300 font-medium">{event?.name}</p>
+                                  
+                                  {event?.isTeamEvent && formData.teammates[eventId]?.filter(name => name.trim()).length > 0 && (
+                                    <div className="mt-1">
+                                      <p className="text-sm text-gray-400">Teammates:</p>
+                                      <ul className="list-disc list-inside pl-2">
+                                        {formData.teammates[eventId]
+                                          .filter(name => name.trim())
+                                          .map((name, idx) => (
+                                            <li key={`review-${eventId}-tm-${idx}`} className="text-sm text-gray-300">
+                                              {name}
+                                            </li>
+                                          ))}
+                                      </ul>
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            })}
                           </div>
                         ) : (
                           <p className="text-red-400">No events selected. Please go back and select at least one event.</p>
@@ -420,7 +584,7 @@ const Register = () => {
             <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm">
               <li>Registration fees will be collected at the venue on the day of the event.</li>
               <li>Please bring your college ID card for verification.</li>
-              <li>For team events, only one team member needs to register, but provide all team members' details during the event.</li>
+              <li>For team events, all team members' details are required during registration.</li>
               <li>A confirmation email will be sent to your registered email address.</li>
               <li>For any queries, contact us at <span className="text-moonstone-pink">info@moonstone.edu</span></li>
             </ul>
