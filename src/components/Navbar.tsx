@@ -25,7 +25,7 @@ const Navbar = () => {
   }, [location]);
 
   const navbarClasses = `fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-    scrolled ? 'py-3 bg-moonstone-dark/90 backdrop-blur-md shadow-lg' : 'py-6 bg-transparent'
+    scrolled ? 'py-3 bg-enigma-dark/90 backdrop-blur-md shadow-lg' : 'py-6 bg-transparent'
   }`;
 
   const navLinks = [
@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex items-center justify-between">
         <Link to="/" className="flex items-center">
           <span className="text-2xl font-bold text-white uppercase tracking-wider">
-            MOON<span className="text-moonstone-pink">STONE</span>
+            MOON<span className="text-enigma-pink">STONE</span>
           </span>
         </Link>
 
@@ -51,8 +51,8 @@ const Navbar = () => {
             <Link
               key={link.name}
               to={link.path}
-              className={`text-sm uppercase font-medium tracking-wider transition-colors duration-300 hover:text-moonstone-pink ${
-                location.pathname === link.path ? 'text-moonstone-pink' : 'text-white/80'
+              className={`text-sm uppercase font-medium tracking-wider transition-colors duration-300 hover:text-enigma-pink ${
+                location.pathname === link.path ? 'text-enigma-pink' : 'text-white/80'
               }`}
             >
               {link.name}
@@ -61,7 +61,7 @@ const Navbar = () => {
           <Link to="/register">
             <Button 
               variant="default" 
-              className="bg-gradient-to-r from-moonstone-pink to-moonstone-teal text-white rounded-md hover:shadow-lg hover:shadow-moonstone-pink/20 transition-all duration-300"
+              className="bg-gradient-to-r from-enigma-pink to-enigma-teal text-white rounded-md hover:shadow-lg hover:shadow-enigma-pink/20 transition-all duration-300"
             >
               Register
             </Button>
@@ -82,14 +82,14 @@ const Navbar = () => {
 
       {/* Mobile Navigation Menu */}
       {isOpen && (
-        <div className="md:hidden bg-moonstone-dark/95 backdrop-blur-lg absolute top-full left-0 right-0 shadow-lg animate-fade-in">
+        <div className="md:hidden bg-enigma-dark/95 backdrop-blur-lg absolute top-full left-0 right-0 shadow-lg animate-fade-in">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
-                className={`text-sm uppercase font-medium tracking-wider py-2 transition-colors duration-300 hover:text-moonstone-pink ${
-                  location.pathname === link.path ? 'text-moonstone-pink' : 'text-white/80'
+                className={`text-sm uppercase font-medium tracking-wider py-2 transition-colors duration-300 hover:text-enigma-pink ${
+                  location.pathname === link.path ? 'text-enigma-pink' : 'text-white/80'
                 }`}
               >
                 {link.name}
@@ -98,7 +98,7 @@ const Navbar = () => {
             <Link to="/register" className="py-2">
               <Button 
                 variant="default" 
-                className="w-full bg-gradient-to-r from-moonstone-pink to-moonstone-teal text-white rounded-md"
+                className="w-full bg-gradient-to-r from-enigma-pink to-enigma-teal text-white rounded-md"
               >
                 Register
               </Button>

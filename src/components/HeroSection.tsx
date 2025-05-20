@@ -12,10 +12,10 @@ const HeroSection = () => {
     <div className="min-h-screen flex items-center relative overflow-hidden pt-24 pb-16">
       {/* Background Elements */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-moonstone-pink/20 blur-[100px] animate-pulse-glow"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 rounded-full bg-moonstone-teal/20 blur-[120px] animate-pulse-glow"></div>
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-enigma-pink/20 blur-[100px] animate-pulse-glow"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 rounded-full bg-enigma-teal/20 blur-[120px] animate-pulse-glow"></div>
         <motion.div 
-          className="absolute top-1/2 left-1/2 w-80 h-80 rounded-full bg-moonstone-purple/20 blur-[150px]"
+          className="absolute top-1/2 left-1/2 w-80 h-80 rounded-full bg-enigma-purple/20 blur-[150px]"
           animate={{ 
             scale: [1, 1.2, 1],
             opacity: [0.5, 0.8, 0.5],
@@ -33,7 +33,7 @@ const HeroSection = () => {
         {floatingIcons.map((Icon, index) => (
           <motion.div 
             key={index}
-            className="absolute text-moonstone-teal/30"
+            className="absolute text-enigma-teal/30"
             initial={{ 
               x: Math.random() * 100 - 50, 
               y: Math.random() * 100 - 50,
@@ -126,15 +126,15 @@ const HeroSection = () => {
               }}
               transition={{ duration: 3, repeat: Infinity }}
             >
-              MOONSTONE
+              ENIGMA*
             </motion.span>
             <motion.span 
-              className="block mt-2 bg-gradient-to-r from-moonstone-pink to-moonstone-teal bg-clip-text text-transparent"
+              className="block mt-2 bg-gradient-to-r from-enigma-pink to-enigma-teal bg-clip-text text-transparent"
               initial={{ backgroundPosition: "0% 50%" }}
               animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
               transition={{ duration: 8, repeat: Infinity }}
             >
-              COLLEGE FEST 2025
+              TECH FEST 2025
             </motion.span>
           </motion.h1>
           
@@ -153,7 +153,7 @@ const HeroSection = () => {
             >
               Two days of competitions, fun activities, and amazing experiences.
             </motion.span>{" "}
-            Join us on May 20-21, 2025 for the biggest college event of the year.
+            Join us on May 27-28, 2025 , organised by SDM BCA department .
           </motion.p>
           
           <motion.div 
@@ -182,7 +182,7 @@ const HeroSection = () => {
                 whileTap={{ scale: 0.97 }}
               >
                 <Button 
-                  className="bg-gradient-to-r from-moonstone-pink to-moonstone-teal text-white px-8 py-6 rounded-md hover:shadow-lg hover:shadow-moonstone-pink/20 transition-all duration-300 text-lg"
+                  className="bg-gradient-to-r from-enigma-pink to-enigma-teal text-white px-8 py-6 rounded-md hover:shadow-lg hover:shadow-enigma-pink/20 transition-all duration-300 text-lg"
                 >
                   <motion.span
                     animate={{ scale: [1, 1.05, 1] }}
@@ -200,7 +200,7 @@ const HeroSection = () => {
               >
                 <Button 
                   variant="outline" 
-                  className="bg-transparent border border-moonstone-pink/50 text-white px-8 py-6 rounded-md hover:border-moonstone-pink hover:bg-moonstone-pink/10 transition-all duration-300 text-lg relative group"
+                  className="bg-transparent border border-enigma-pink/50 text-white px-8 py-6 rounded-md hover:border-enigma-pink hover:bg-enigma-pink/10 transition-all duration-300 text-lg relative group"
                 >
                   <motion.span
                     className="relative z-10"
@@ -210,7 +210,7 @@ const HeroSection = () => {
                     Explore Events
                   </motion.span>
                   <motion.span 
-                    className="absolute inset-0 bg-gradient-to-r from-moonstone-pink/0 to-moonstone-teal/0 rounded-md opacity-0 group-hover:opacity-10"
+                    className="absolute inset-0 bg-gradient-to-r from-enigma-pink/0 to-enigma-teal/0 rounded-md opacity-0 group-hover:opacity-10"
                     animate={{
                       backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"]
                     }}

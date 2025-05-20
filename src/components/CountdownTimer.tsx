@@ -1,8 +1,8 @@
 
 import { useState, useEffect } from 'react';
 
-// Set the festival date (May 20, 2025)
-const FEST_DATE = new Date('2025-05-20T09:00:00').getTime();
+// Set the festival date (May 27, 2025)
+const FEST_DATE = new Date('2025-05-27T09:00:00').getTime();
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({
@@ -40,7 +40,7 @@ const CountdownTimer = () => {
       {Object.entries(timeLeft).map(([label, value]) => (
         <div 
           key={label} 
-          className="flex flex-col items-center bg-moonstone-purple/30 backdrop-blur-sm rounded-lg border border-moonstone-purple/40 px-3 sm:px-5 py-3 min-w-[90px]"
+          className="flex flex-col items-center bg-enigma-purple/30 backdrop-blur-sm rounded-lg border border-enigma-purple/40 px-3 sm:px-5 py-3 min-w-[90px]"
         >
           <div className="text-2xl sm:text-4xl font-bold text-white mb-1">
             {value.toString().padStart(2, '0')}

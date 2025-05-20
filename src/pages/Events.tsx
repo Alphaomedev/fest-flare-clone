@@ -38,11 +38,11 @@ const Events = () => {
 
         {/* Filter buttons */}
         <div className="flex justify-center mb-8">
-          <div className="bg-moonstone-purple/20 backdrop-blur-sm p-1 rounded-lg flex">
+          <div className="bg-enigma-purple/20 backdrop-blur-sm p-1 rounded-lg flex">
             <button 
               onClick={() => setFilter("all")}
               className={`px-4 py-2 rounded-md text-sm font-medium transition ${
-                filter === "all" ? "bg-moonstone-purple text-white" : "text-gray-300 hover:text-white"
+                filter === "all" ? "bg-enigma-purple text-white" : "text-gray-300 hover:text-white"
               }`}
             >
               All Events
@@ -50,7 +50,7 @@ const Events = () => {
             <button 
               onClick={() => setFilter("open")}
               className={`px-4 py-2 rounded-md text-sm font-medium transition ${
-                filter === "open" ? "bg-moonstone-teal text-white" : "text-gray-300 hover:text-white"
+                filter === "open" ? "bg-enigma-teal text-white" : "text-gray-300 hover:text-white"
               }`}
             >
               Open to All
@@ -58,7 +58,7 @@ const Events = () => {
             <button 
               onClick={() => setFilter("closed")}
               className={`px-4 py-2 rounded-md text-sm font-medium transition ${
-                filter === "closed" ? "bg-moonstone-pink text-white" : "text-gray-300 hover:text-white"
+                filter === "closed" ? "bg-enigma-pink text-white" : "text-gray-300 hover:text-white"
               }`}
             >
               Restricted Events
@@ -68,17 +68,17 @@ const Events = () => {
         
         {/* Events Tabs */}
         <Tabs defaultValue="day1" className="mb-12">
-          <TabsList className="w-full bg-moonstone-purple/20 backdrop-blur-sm justify-center mb-6">
-            <TabsTrigger value="day1" className="data-[state=active]:bg-moonstone-pink data-[state=active]:text-white">
+          <TabsList className="w-full bg-enigma-purple/20 backdrop-blur-sm justify-center mb-6">
+            <TabsTrigger value="day1" className="data-[state=active]:bg-enigma-pink data-[state=active]:text-white">
               Day 1 Events
             </TabsTrigger>
-            <TabsTrigger value="day2" className="data-[state=active]:bg-moonstone-teal data-[state=active]:text-white">
+            <TabsTrigger value="day2" className="data-[state=active]:bg-enigma-teal data-[state=active]:text-white">
               Day 2 Events
             </TabsTrigger>
           </TabsList>
           
           <TabsContent value="day1" className="mt-0">
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Day 1: May 20, 2025</h2>
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">Day 1: May 27, 2025</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredDay1.map((event, index) => (
@@ -102,7 +102,7 @@ const Events = () => {
           </TabsContent>
           
           <TabsContent value="day2" className="mt-0">
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Day 2: May 21, 2025</h2>
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">Day 2: May 28, 2025</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredDay2.map((event, index) => (
@@ -127,14 +127,14 @@ const Events = () => {
         </Tabs>
 
         {/* Registration CTA */}
-        <div className="text-center bg-gradient-to-r from-moonstone-pink/10 to-moonstone-teal/10 rounded-lg p-8 max-w-3xl mx-auto">
+        <div className="text-center bg-gradient-to-r from-enigma-pink/10 to-enigma-teal/10 rounded-lg p-8 max-w-3xl mx-auto">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Participate?</h3>
           <p className="text-gray-300 mb-6">
-            Register now to participate in these exciting events and make the most of MOONSTONE Fest!
+            Register now to participate in these exciting events and make the most of ENIGMA* Fest!
           </p>
           <Link to="/register">
             <Button 
-              className="bg-gradient-to-r from-moonstone-pink to-moonstone-teal text-white px-6 py-2 rounded-md hover:shadow-lg hover:shadow-moonstone-pink/20"
+              className="bg-gradient-to-r from-enigma-pink to-enigma-teal text-white px-6 py-2 rounded-md hover:shadow-lg hover:shadow-enigma-pink/20"
             >
               Register Now
             </Button>

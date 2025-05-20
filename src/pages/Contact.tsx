@@ -58,7 +58,7 @@ const Contact = () => {
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Contact Us</h1>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Have questions about MOONSTONE Fest? Reach out to us and we'll get back to you as soon as possible.
+            Have questions about ENIGMA* Fest? Reach out to us and we'll get back to you as soon as possible.
           </p>
         </div>
         
@@ -68,7 +68,7 @@ const Contact = () => {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-moonstone-purple/20 backdrop-blur-sm rounded-lg p-6 border border-moonstone-purple/30"
+            className="bg-enigma-purple/20 backdrop-blur-sm rounded-lg p-6 border border-enigma-purple/30"
           >
             <h2 className="text-2xl font-bold text-white mb-6">Send a Message</h2>
             
@@ -82,7 +82,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Your name"
-                    className="bg-moonstone-purple/30 border-moonstone-purple/40 placeholder-gray-500"
+                    className="bg-enigma-purple/30 border-enigma-purple/40 placeholder-gray-500"
                     required
                   />
                 </div>
@@ -96,7 +96,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="Your email"
-                    className="bg-moonstone-purple/30 border-moonstone-purple/40 placeholder-gray-500"
+                    className="bg-enigma-purple/30 border-enigma-purple/40 placeholder-gray-500"
                     required
                   />
                 </div>
@@ -110,7 +110,7 @@ const Contact = () => {
                   value={formData.subject}
                   onChange={handleChange}
                   placeholder="Message subject"
-                  className="bg-moonstone-purple/30 border-moonstone-purple/40 placeholder-gray-500"
+                  className="bg-enigma-purple/30 border-enigma-purple/40 placeholder-gray-500"
                 />
               </div>
               
@@ -122,14 +122,14 @@ const Contact = () => {
                   value={formData.message}
                   onChange={handleChange}
                   placeholder="Your message"
-                  className="bg-moonstone-purple/30 border-moonstone-purple/40 placeholder-gray-500 min-h-[150px]"
+                  className="bg-enigma-purple/30 border-enigma-purple/40 placeholder-gray-500 min-h-[150px]"
                   required
                 />
               </div>
               
               <Button 
                 type="submit"
-                className="bg-gradient-to-r from-moonstone-pink to-moonstone-teal text-white w-full"
+                className="bg-gradient-to-r from-enigma-pink to-enigma-teal text-white w-full"
               >
                 Send Message
               </Button>
@@ -142,12 +142,12 @@ const Contact = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="bg-moonstone-purple/20 backdrop-blur-sm rounded-lg p-6 border border-moonstone-purple/30 mb-6">
+            <div className="bg-enigma-purple/20 backdrop-blur-sm rounded-lg p-6 border border-enigma-purple/30 mb-6">
               <h2 className="text-2xl font-bold text-white mb-6">Contact Information</h2>
               
               <div className="space-y-6">
                 <div className="flex items-start">
-                  <MapPin size={24} className="text-moonstone-pink mt-1 mr-4" />
+                  <MapPin size={24} className="text-enigma-pink mt-1 mr-4" />
                   <div>
                     <h3 className="text-lg font-medium text-white mb-1">Address</h3>
                     <p className="text-gray-300">
@@ -159,16 +159,16 @@ const Contact = () => {
                 </div>
                 
                 <div className="flex items-start">
-                  <Mail size={24} className="text-moonstone-pink mt-1 mr-4" />
+                  <Mail size={24} className="text-enigma-pink mt-1 mr-4" />
                   <div>
                     <h3 className="text-lg font-medium text-white mb-1">Email</h3>
-                    <p className="text-gray-300">info@moonstone.edu</p>
-                    <p className="text-gray-300">support@moonstone.edu</p>
+                    <p className="text-gray-300">info@enigma.edu</p>
+                    <p className="text-gray-300">support@enigma.edu</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <Phone size={24} className="text-moonstone-pink mt-1 mr-4" />
+                  <Phone size={24} className="text-enigma-pink mt-1 mr-4" />
                   <div>
                     <h3 className="text-lg font-medium text-white mb-1">Phone</h3>
                     <p className="text-gray-300">+91 98765 43210</p>
@@ -178,7 +178,7 @@ const Contact = () => {
               </div>
             </div>
             
-            <div className="bg-moonstone-purple/20 backdrop-blur-sm rounded-lg p-6 border border-moonstone-purple/30">
+            <div className="bg-enigma-purple/20 backdrop-blur-sm rounded-lg p-6 border border-enigma-purple/30">
               <h2 className="text-2xl font-bold text-white mb-6">Follow Us</h2>
               
               <div className="flex flex-col space-y-4">
@@ -186,30 +186,30 @@ const Contact = () => {
                   href="https://instagram.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center text-gray-300 hover:text-moonstone-pink transition-colors"
+                  className="flex items-center text-gray-300 hover:text-enigma-pink transition-colors"
                 >
                   <Instagram size={24} className="mr-4" />
-                  <span>@moonstone_fest</span>
+                  <span>@enigma_fest</span>
                 </a>
                 
                 <a 
                   href="https://facebook.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center text-gray-300 hover:text-moonstone-pink transition-colors"
+                  className="flex items-center text-gray-300 hover:text-enigma-pink transition-colors"
                 >
                   <Facebook size={24} className="mr-4" />
-                  <span>Moonstone Festival</span>
+                  <span>ENIGMA* Festival</span>
                 </a>
                 
                 <a 
                   href="https://twitter.com" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="flex items-center text-gray-300 hover:text-moonstone-pink transition-colors"
+                  className="flex items-center text-gray-300 hover:text-enigma-pink transition-colors"
                 >
                   <Twitter size={24} className="mr-4" />
-                  <span>@moonstone_fest</span>
+                  <span>@enigma_fest</span>
                 </a>
               </div>
             </div>
@@ -217,7 +217,7 @@ const Contact = () => {
         </div>
         
         {/* Google Map */}
-        <div className="mt-12 rounded-lg overflow-hidden h-[400px] border border-moonstone-purple/30">
+        <div className="mt-12 rounded-lg overflow-hidden h-[400px] border border-enigma-purple/30">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.0088120589837!2d77.5407116!3d12.9702626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzEzLjAiTiA3N8KwMzInMjYuNiJF!5e0!3m2!1sen!2sin!4v1599661200000!5m2!1sen!2sin"
             width="100%"

@@ -61,10 +61,10 @@ const EventDetail = () => {
     return (
       <div className="min-h-screen pt-24 pb-16 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-4xl font-bold text-moonstone-pink mb-4">Event Not Found</h1>
+          <h1 className="text-4xl font-bold text-enigma-pink mb-4">Event Not Found</h1>
           <p className="text-gray-300 mb-6">Sorry, we couldn't find the event you're looking for.</p>
           <Link to="/events">
-            <Button className="bg-gradient-to-r from-moonstone-pink to-moonstone-teal text-white">
+            <Button className="bg-gradient-to-r from-enigma-pink to-enigma-teal text-white">
               Back to Events
             </Button>
           </Link>
@@ -82,7 +82,7 @@ const EventDetail = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <Link to="/events" className="inline-flex items-center text-moonstone-pink hover:text-moonstone-teal mb-6 transition-colors">
+          <Link to="/events" className="inline-flex items-center text-enigma-pink hover:text-enigma-teal mb-6 transition-colors">
             <ArrowLeft className="mr-2 h-5 w-5" />
             Back to Events
           </Link>
@@ -90,27 +90,27 @@ const EventDetail = () => {
           <div className="flex items-center justify-between mb-6">
             <h1 className="text-3xl md:text-4xl font-bold text-white">{event.title}</h1>
             <Badge 
-              className={`${event.openToAll ? 'bg-moonstone-teal hover:bg-moonstone-teal/90' : 'bg-moonstone-pink hover:bg-moonstone-pink/90'} text-white`}
+              className={`${event.openToAll ? 'bg-enigma-teal hover:bg-enigma-teal/90' : 'bg-enigma-pink hover:bg-enigma-pink/90'} text-white`}
             >
               {event.openToAll ? 'Open to All' : 'Restricted'}
             </Badge>
           </div>
           
           {/* Event banner/image */}
-          <div className="mb-8 rounded-xl overflow-hidden bg-gradient-to-r from-moonstone-pink/10 to-moonstone-teal/10 p-10 flex items-center justify-center">
-            <div className="rounded-full bg-moonstone-purple/40 p-6 backdrop-blur-sm">
+          <div className="mb-8 rounded-xl overflow-hidden bg-gradient-to-r from-enigma-pink/10 to-enigma-teal/10 p-10 flex items-center justify-center">
+            <div className="rounded-full bg-enigma-purple/40 p-6 backdrop-blur-sm">
               {/* Use larger icon here */}
-              <Calendar className="h-24 w-24 text-moonstone-pink" />
+              <Calendar className="h-24 w-24 text-enigma-pink" />
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-            <Card className="bg-moonstone-purple/30 border-moonstone-purple/40">
+            <Card className="bg-enigma-purple/30 border-enigma-purple/40">
               <CardContent className="pt-6">
                 <h3 className="text-xl font-semibold text-white mb-4">Event Details</h3>
                 <ul className="space-y-4">
                   <li className="flex items-start">
-                    <Clock className="h-5 w-5 text-moonstone-pink mr-2 mt-0.5" />
+                    <Clock className="h-5 w-5 text-enigma-pink mr-2 mt-0.5" />
                     <div>
                       <span className="font-medium text-white">Time:</span>
                       <p className="text-gray-300">{event.time}</p>
@@ -119,7 +119,7 @@ const EventDetail = () => {
                   
                   {event.date && (
                     <li className="flex items-start">
-                      <Calendar className="h-5 w-5 text-moonstone-pink mr-2 mt-0.5" />
+                      <Calendar className="h-5 w-5 text-enigma-pink mr-2 mt-0.5" />
                       <div>
                         <span className="font-medium text-white">Date:</span>
                         <p className="text-gray-300">{event.date}</p>
@@ -129,7 +129,7 @@ const EventDetail = () => {
                   
                   {event.mode && (
                     <li className="flex items-start">
-                      <MapPin className="h-5 w-5 text-moonstone-pink mr-2 mt-0.5" />
+                      <MapPin className="h-5 w-5 text-enigma-pink mr-2 mt-0.5" />
                       <div>
                         <span className="font-medium text-white">Mode:</span>
                         <p className="text-gray-300">{event.mode}</p>
@@ -139,7 +139,7 @@ const EventDetail = () => {
                   
                   {event.type && (
                     <li className="flex items-start">
-                      <Book className="h-5 w-5 text-moonstone-pink mr-2 mt-0.5" />
+                      <Book className="h-5 w-5 text-enigma-pink mr-2 mt-0.5" />
                       <div>
                         <span className="font-medium text-white">Type:</span>
                         <p className="text-gray-300">{event.type}</p>
@@ -150,13 +150,13 @@ const EventDetail = () => {
               </CardContent>
             </Card>
             
-            <Card className="bg-moonstone-purple/30 border-moonstone-purple/40">
+            <Card className="bg-enigma-purple/30 border-enigma-purple/40">
               <CardContent className="pt-6">
                 <h3 className="text-xl font-semibold text-white mb-4">Participation Info</h3>
                 <ul className="space-y-4">
                   {event.team && (
                     <li className="flex items-start">
-                      <Users className="h-5 w-5 text-moonstone-pink mr-2 mt-0.5" />
+                      <Users className="h-5 w-5 text-enigma-pink mr-2 mt-0.5" />
                       <div>
                         <span className="font-medium text-white">Team Size:</span>
                         <p className="text-gray-300">{event.team}</p>
@@ -166,7 +166,7 @@ const EventDetail = () => {
                   
                   {event.regFee && (
                     <li className="flex items-start">
-                      <DollarSign className="h-5 w-5 text-moonstone-pink mr-2 mt-0.5" />
+                      <DollarSign className="h-5 w-5 text-enigma-pink mr-2 mt-0.5" />
                       <div>
                         <span className="font-medium text-white">Registration Fee:</span>
                         <p className="text-gray-300">{event.regFee}</p>
@@ -176,7 +176,7 @@ const EventDetail = () => {
                   
                   {event.prize && (
                     <li className="flex items-start">
-                      <Trophy className="h-5 w-5 text-moonstone-pink mr-2 mt-0.5" />
+                      <Trophy className="h-5 w-5 text-enigma-pink mr-2 mt-0.5" />
                       <div>
                         <span className="font-medium text-white">Prize:</span>
                         <p className="text-gray-300">{event.prize}</p>
@@ -190,7 +190,7 @@ const EventDetail = () => {
 
           {/* Event Description */}
           {event.description && (
-            <Card className="bg-moonstone-purple/30 border-moonstone-purple/40 mb-10">
+            <Card className="bg-enigma-purple/30 border-enigma-purple/40 mb-10">
               <CardContent className="pt-6">
                 <h3 className="text-xl font-semibold text-white mb-3">Description</h3>
                 <p className="text-gray-300">{event.description}</p>
@@ -199,14 +199,14 @@ const EventDetail = () => {
           )}
 
           {/* Registration CTA */}
-          <div className="text-center bg-gradient-to-r from-moonstone-pink/10 to-moonstone-teal/10 rounded-lg p-8">
+          <div className="text-center bg-gradient-to-r from-enigma-pink/10 to-enigma-teal/10 rounded-lg p-8">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Participate?</h3>
             <p className="text-gray-300 mb-6">
-              Register now to participate in this exciting event and showcase your talent at MOONSTONE Fest!
+              Register now to participate in this exciting event and showcase your talent at ENIGMA* Fest!
             </p>
             <Link to="/register">
               <Button 
-                className="bg-gradient-to-r from-moonstone-pink to-moonstone-teal text-white px-6 py-2 rounded-md hover:shadow-lg hover:shadow-moonstone-pink/20"
+                className="bg-gradient-to-r from-enigma-pink to-enigma-teal text-white px-6 py-2 rounded-md hover:shadow-lg hover:shadow-enigma-pink/20"
               >
                 Register Now
               </Button>

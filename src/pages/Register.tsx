@@ -243,7 +243,7 @@ const Register = () => {
       
       toast({
         title: "Registration Successful!",
-        description: "Thank you for registering for MOONSTONE Fest. Check your email for confirmation.",
+        description: "Thank you for registering for ENIGMA* Fest. Check your email for confirmation.",
       });
       
       // Reset form
@@ -279,7 +279,7 @@ const Register = () => {
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Register for MOONSTONE Fest</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Register for ENIGMA* Fest</h1>
           <p className="text-gray-300 max-w-2xl mx-auto">
             Fill out the form below to register for our exciting events. You can register for multiple events at once.
           </p>
@@ -292,7 +292,7 @@ const Register = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <Card className="bg-moonstone-purple/20 backdrop-blur-sm border border-moonstone-purple/30">
+            <Card className="bg-enigma-purple/20 backdrop-blur-sm border border-enigma-purple/30">
               <CardHeader>
                 <CardTitle className="text-white">Registration Form</CardTitle>
                 <CardDescription>
@@ -313,7 +313,7 @@ const Register = () => {
                           value={formData.name}
                           onChange={handleChange}
                           placeholder="Enter your full name"
-                          className="bg-moonstone-purple/30 border-moonstone-purple/40 text-white placeholder-gray-400"
+                          className="bg-enigma-purple/30 border-enigma-purple/40 text-white placeholder-gray-400"
                           required
                         />
                       </div>
@@ -327,7 +327,7 @@ const Register = () => {
                           value={formData.email}
                           onChange={handleChange}
                           placeholder="Enter your email"
-                          className="bg-moonstone-purple/30 border-moonstone-purple/40 text-white placeholder-gray-400"
+                          className="bg-enigma-purple/30 border-enigma-purple/40 text-white placeholder-gray-400"
                           required
                         />
                       </div>
@@ -340,7 +340,7 @@ const Register = () => {
                           value={formData.phone}
                           onChange={handleChange}
                           placeholder="Enter your phone number"
-                          className="bg-moonstone-purple/30 border-moonstone-purple/40 text-white placeholder-gray-400"
+                          className="bg-enigma-purple/30 border-enigma-purple/40 text-white placeholder-gray-400"
                           required
                         />
                       </div>
@@ -353,7 +353,7 @@ const Register = () => {
                           value={formData.college}
                           onChange={handleChange}
                           placeholder="Enter your college name"
-                          className="bg-moonstone-purple/30 border-moonstone-purple/40 text-white placeholder-gray-400"
+                          className="bg-enigma-purple/30 border-enigma-purple/40 text-white placeholder-gray-400"
                         />
                       </div>
                       
@@ -364,7 +364,7 @@ const Register = () => {
                             value={formData.department}
                             onValueChange={(value) => handleSelectChange("department", value)}
                           >
-                            <SelectTrigger className="bg-moonstone-purple/30 border-moonstone-purple/40 text-white">
+                            <SelectTrigger className="bg-enigma-purple/30 border-enigma-purple/40 text-white">
                               <SelectValue placeholder="Select department" />
                             </SelectTrigger>
                             <SelectContent>
@@ -383,7 +383,7 @@ const Register = () => {
                             value={formData.year}
                             onValueChange={(value) => handleSelectChange("year", value)}
                           >
-                            <SelectTrigger className="bg-moonstone-purple/30 border-moonstone-purple/40 text-white">
+                            <SelectTrigger className="bg-enigma-purple/30 border-enigma-purple/40 text-white">
                               <SelectValue placeholder="Select year" />
                             </SelectTrigger>
                             <SelectContent>
@@ -406,7 +406,7 @@ const Register = () => {
                       <div className="space-y-4">
                         {events.map((event) => (
                           <div key={event.id}>
-                            <div className="flex items-start space-x-3 p-3 bg-moonstone-purple/30 rounded-md border border-moonstone-purple/40">
+                            <div className="flex items-start space-x-3 p-3 bg-enigma-purple/30 rounded-md border border-enigma-purple/40">
                               <Checkbox 
                                 id={event.id} 
                                 checked={formData.events.includes(event.id)}
@@ -430,7 +430,7 @@ const Register = () => {
                             {/* Teammate inputs for team events */}
                             {event.isTeamEvent && formData.events.includes(event.id) && (
                               <div className="pl-8 mt-2 space-y-2">
-                                <p className="text-sm text-moonstone-pink font-medium">Add Teammate Names:</p>
+                                <p className="text-sm text-enigma-pink font-medium">Add Teammate Names:</p>
                                 
                                 {(formData.teammates[event.id] || [""]).map((teammate, index) => (
                                   <div key={`${event.id}-teammate-${index}`} className="flex items-center space-x-2">
@@ -438,7 +438,7 @@ const Register = () => {
                                       value={teammate}
                                       onChange={(e) => handleTeammateChange(event.id, index, e.target.value)}
                                       placeholder={`Teammate ${index + 1} Name`}
-                                      className="bg-moonstone-purple/30 border-moonstone-purple/40 text-white placeholder-gray-400"
+                                      className="bg-enigma-purple/30 border-enigma-purple/40 text-white placeholder-gray-400"
                                     />
                                     <Button
                                       type="button"
@@ -446,7 +446,7 @@ const Register = () => {
                                       size="icon"
                                       onClick={() => removeTeammate(event.id, index)}
                                     >
-                                      <MinusCircle className="h-5 w-5 text-moonstone-pink" />
+                                      <MinusCircle className="h-5 w-5 text-enigma-pink" />
                                     </Button>
                                   </div>
                                 ))}
@@ -457,7 +457,7 @@ const Register = () => {
                                     variant="outline"
                                     size="sm"
                                     onClick={() => addTeammate(event.id)}
-                                    className="flex items-center mt-1 text-sm border-moonstone-pink/50 text-moonstone-pink hover:bg-moonstone-pink/10"
+                                    className="flex items-center mt-1 text-sm border-enigma-pink/50 text-enigma-pink hover:bg-enigma-pink/10"
                                   >
                                     <PlusCircle className="h-4 w-4 mr-1" /> Add Teammate
                                   </Button>
@@ -479,7 +479,7 @@ const Register = () => {
                     <div className="space-y-6">
                       <div>
                         <h3 className="text-white font-medium mb-2">Personal Information</h3>
-                        <div className="bg-moonstone-purple/30 p-3 rounded-md border border-moonstone-purple/40 space-y-2">
+                        <div className="bg-enigma-purple/30 p-3 rounded-md border border-enigma-purple/40 space-y-2">
                           <p className="text-gray-300"><span className="text-gray-400">Name:</span> {formData.name}</p>
                           <p className="text-gray-300"><span className="text-gray-400">Email:</span> {formData.email}</p>
                           <p className="text-gray-300"><span className="text-gray-400">Phone:</span> {formData.phone}</p>
@@ -496,7 +496,7 @@ const Register = () => {
                       <div>
                         <h3 className="text-white font-medium mb-2">Selected Events</h3>
                         {formData.events.length > 0 ? (
-                          <div className="bg-moonstone-purple/30 p-3 rounded-md border border-moonstone-purple/40 divide-y divide-moonstone-purple/30">
+                          <div className="bg-enigma-purple/30 p-3 rounded-md border border-enigma-purple/40 divide-y divide-enigma-purple/30">
                             {formData.events.map((eventId) => {
                               const event = events.find(e => e.id === eventId);
                               return (
@@ -536,7 +536,7 @@ const Register = () => {
                           htmlFor="terms" 
                           className="text-gray-300 text-sm cursor-pointer"
                         >
-                          I agree to the <span className="text-moonstone-pink">Terms and Conditions</span> and <span className="text-moonstone-pink">Privacy Policy</span> of MOONSTONE Fest. I confirm that all information provided is accurate.
+                          I agree to the <span className="text-enigma-pink">Terms and Conditions</span> and <span className="text-enigma-pink">Privacy Policy</span> of ENIGMA* Fest. I confirm that all information provided is accurate.
                         </label>
                       </div>
                     </div>
@@ -549,7 +549,7 @@ const Register = () => {
                         type="button"
                         variant="outline"
                         onClick={prevStep}
-                        className="border-moonstone-pink/50 text-white hover:bg-moonstone-pink/10"
+                        className="border-enigma-pink/50 text-white hover:bg-enigma-pink/10"
                       >
                         Previous
                       </Button>
@@ -559,14 +559,14 @@ const Register = () => {
                       <Button 
                         type="button"
                         onClick={nextStep}
-                        className="bg-gradient-to-r from-moonstone-pink to-moonstone-teal text-white ml-auto"
+                        className="bg-gradient-to-r from-enigma-pink to-enigma-teal text-white ml-auto"
                       >
                         Next
                       </Button>
                     ) : (
                       <Button 
                         type="submit"
-                        className="bg-gradient-to-r from-moonstone-pink to-moonstone-teal text-white ml-auto"
+                        className="bg-gradient-to-r from-enigma-pink to-enigma-teal text-white ml-auto"
                         disabled={formData.events.length === 0 || !formData.agreeToTerms || isSubmitting}
                       >
                         {isSubmitting ? "Submitting..." : "Submit Registration"}
@@ -579,14 +579,14 @@ const Register = () => {
           </motion.div>
           
           {/* Important Notes */}
-          <div className="mt-8 bg-moonstone-purple/20 backdrop-blur-sm p-4 rounded-lg border border-moonstone-purple/30">
+          <div className="mt-8 bg-enigma-purple/20 backdrop-blur-sm p-4 rounded-lg border border-enigma-purple/30">
             <h3 className="text-lg font-medium text-white mb-2">Important Notes:</h3>
             <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm">
               <li>Registration fees will be collected at the venue on the day of the event.</li>
               <li>Please bring your college ID card for verification.</li>
               <li>For team events, all team members' details are required during registration.</li>
               <li>A confirmation email will be sent to your registered email address.</li>
-              <li>For any queries, contact us at <span className="text-moonstone-pink">info@moonstone.edu</span></li>
+              <li>For any queries, contact us at <span className="text-enigma-pink">info@enigma.edu</span></li>
             </ul>
           </div>
         </div>

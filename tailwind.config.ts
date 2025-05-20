@@ -63,7 +63,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				moonstone: {
+				enigma: {
 					"dark": "#171123",
 					"purple": "#3D245C",
 					"pink": "#FF2F8E",

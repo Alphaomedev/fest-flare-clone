@@ -46,7 +46,7 @@ const Schedule = () => {
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Event Schedule</h1>
           <p className="text-gray-300 max-w-2xl mx-auto">
-            Plan your two days at MOONSTONE Fest with our comprehensive schedule of all events and activities.
+            Plan your two days at ENIGMA* Fest with our comprehensive schedule of all events and activities.
           </p>
         </div>
 
@@ -54,24 +54,24 @@ const Schedule = () => {
           {/* Day 1 Schedule */}
           <div>
             <div className="mb-6 flex items-center">
-              <Calendar className="mr-3 text-moonstone-pink" size={24} />
-              <h2 className="text-2xl font-bold text-white">Day 1: May 20, 2025</h2>
+              <Calendar className="mr-3 text-enigma-pink" size={24} />
+              <h2 className="text-2xl font-bold text-white">Day 1: May 27, 2025</h2>
             </div>
 
             <motion.ul 
-              className="relative border-l border-moonstone-pink/30 ml-3 space-y-8"
+              className="relative border-l border-enigma-pink/30 ml-3 space-y-8"
               variants={timelineVariants}
               initial="hidden"
               animate="show"
             >
               {day1Schedule.map((item, index) => (
                 <motion.li key={index} className="ml-6" variants={itemVariants}>
-                  <span className="absolute flex items-center justify-center w-6 h-6 bg-moonstone-pink rounded-full -left-3">
+                  <span className="absolute flex items-center justify-center w-6 h-6 bg-enigma-pink rounded-full -left-3">
                     <Clock size={12} className="text-white" />
                   </span>
                   <div className="event-card p-4 rounded-lg">
                     <h3 className="text-lg font-semibold text-white mb-1">{item.event}</h3>
-                    <p className="text-moonstone-pink text-sm mb-1">{item.time}</p>
+                    <p className="text-enigma-pink text-sm mb-1">{item.time}</p>
                     <p className="text-gray-400 text-sm">{item.location}</p>
                   </div>
                 </motion.li>
@@ -82,24 +82,24 @@ const Schedule = () => {
           {/* Day 2 Schedule */}
           <div>
             <div className="mb-6 flex items-center">
-              <Calendar className="mr-3 text-moonstone-teal" size={24} />
-              <h2 className="text-2xl font-bold text-white">Day 2: May 21, 2025</h2>
+              <Calendar className="mr-3 text-enigma-teal" size={24} />
+              <h2 className="text-2xl font-bold text-white">Day 2: May 28, 2025</h2>
             </div>
 
             <motion.ul 
-              className="relative border-l border-moonstone-teal/30 ml-3 space-y-8"
+              className="relative border-l border-enigma-teal/30 ml-3 space-y-8"
               variants={timelineVariants}
               initial="hidden"
               animate="show"
             >
               {day2Schedule.map((item, index) => (
                 <motion.li key={index} className="ml-6" variants={itemVariants}>
-                  <span className="absolute flex items-center justify-center w-6 h-6 bg-moonstone-teal rounded-full -left-3">
+                  <span className="absolute flex items-center justify-center w-6 h-6 bg-enigma-teal rounded-full -left-3">
                     <Clock size={12} className="text-white" />
                   </span>
                   <div className="event-card p-4 rounded-lg">
                     <h3 className="text-lg font-semibold text-white mb-1">{item.event}</h3>
-                    <p className="text-moonstone-teal text-sm mb-1">{item.time}</p>
+                    <p className="text-enigma-teal text-sm mb-1">{item.time}</p>
                     <p className="text-gray-400 text-sm">{item.location}</p>
                   </div>
                 </motion.li>
@@ -109,7 +109,7 @@ const Schedule = () => {
         </div>
 
         {/* Notes */}
-        <div className="mt-16 bg-moonstone-purple/20 backdrop-blur-sm rounded-lg p-6">
+        <div className="mt-16 bg-enigma-purple/20 backdrop-blur-sm rounded-lg p-6">
           <h3 className="text-xl font-bold text-white mb-4">Important Notes:</h3>
           <ul className="space-y-3 text-gray-300 list-disc list-inside">
             <li>All participants must register before the events.</li>

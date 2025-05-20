@@ -11,7 +11,7 @@ const day1Events: EventProps[] = [
     openToAll: true,
     icon: "ribbon",
     description: "The official inauguration ceremony of the fest.",
-    detailedDescription: "Join us for the grand opening of MOONSTONE Fest 2025! The event will be inaugurated by our college principal and distinguished guests. This marks the beginning of two days filled with exciting activities, competitions, and fun."
+    detailedDescription: "Join us for the grand opening of ENIGMA* Fest 2025! The event will be inaugurated by our college principal and distinguished guests. This marks the beginning of two days filled with exciting activities, competitions, and fun."
   },
   {
     id: "talents-day",
@@ -95,7 +95,7 @@ const day2Events: EventProps[] = [
     openToAll: true,
     icon: "microphone",
     description: "The official opening ceremony for the main day of the fest.",
-    detailedDescription: "Join us for the formal inauguration of MOONSTONE Fest's main day. The ceremony will feature addresses from college management, faculty coordinators, and student representatives. Everyone attending the fest is welcome to be part of this ceremonial beginning of our main fest day."
+    detailedDescription: "Join us for the formal inauguration of ENIGMA* Fest's main day. The ceremony will feature addresses from college management, faculty coordinators, and student representatives. Everyone attending the fest is welcome to be part of this ceremonial beginning of our main fest day."
   },
   {
     id: "photography-contest",
