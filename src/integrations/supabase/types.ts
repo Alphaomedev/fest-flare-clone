@@ -36,18 +36,21 @@ export type Database = {
           event_id: string
           id: string
           registration_id: string
+          teammates: string | null
         }
         Insert: {
           created_at?: string
           event_id: string
           id?: string
           registration_id: string
+          teammates?: string | null
         }
         Update: {
           created_at?: string
           event_id?: string
           id?: string
           registration_id?: string
+          teammates?: string | null
         }
         Relationships: [
           {
