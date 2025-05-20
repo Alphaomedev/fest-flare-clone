@@ -146,7 +146,7 @@ const HeroSection = () => {
           >
             <motion.span 
               className="inline-block"
-              whileInView={{
+              animate={{
                 color: ["#a1a1aa", "#ffffff", "#a1a1aa"]
               }}
               transition={{ duration: 3, repeat: Infinity }}
@@ -180,11 +180,6 @@ const HeroSection = () => {
               <motion.div 
                 whileHover={{ scale: 1.05 }} 
                 whileTap={{ scale: 0.97 }}
-                initial={{ boxShadow: "0 0 0 rgba(255, 47, 142, 0)" }}
-                whileHover={{ 
-                  boxShadow: "0 0 20px rgba(255, 47, 142, 0.5)",
-                  transition: { duration: 0.2 }
-                }}
               >
                 <Button 
                   className="bg-gradient-to-r from-moonstone-pink to-moonstone-teal text-white px-8 py-6 rounded-md hover:shadow-lg hover:shadow-moonstone-pink/20 transition-all duration-300 text-lg"
@@ -202,11 +197,6 @@ const HeroSection = () => {
               <motion.div 
                 whileHover={{ scale: 1.05 }} 
                 whileTap={{ scale: 0.97 }}
-                initial={{ boxShadow: "0 0 0 rgba(255, 47, 142, 0)" }}
-                whileHover={{ 
-                  boxShadow: "0 0 15px rgba(255, 47, 142, 0.2)",
-                  transition: { duration: 0.2 }
-                }}
               >
                 <Button 
                   variant="outline" 
