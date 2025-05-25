@@ -153,7 +153,7 @@ const HeroSection = () => {
             >
               Two days of competitions, fun activities, and amazing experiences.
             </motion.span>{" "}
-            Join us on May 27-28, 2025 , organised by SDM BCA department .
+            Join us on May 29 & 30, 2025 , organised by SDM BCA department .
           </motion.p>
           
           <motion.div 

@@ -37,13 +37,15 @@ const About = () => {
             <h2 className="text-3xl font-bold text-white mb-6">Our Story</h2>
             <div className="text-gray-300 space-y-4">
               <p>
-                ENIGMA* began as a small departmental event in 2018 and has since grown into one of the largest inter-collegiate festivals in the region. What started as a single-day event with a handful of competitions has evolved into a grand two-day celebration of talent, innovation, and creativity.
+              Nestled in the heart of the coastal region, MPE’s SDM College is known for its commitment to academic excellence, holistic development, and a vibrant campus life. With a legacy of nurturing young minds and fostering innovation, the college offers a dynamic learning environment that empowers students to explore, create, and lead.
+
+Within this ecosystem of growth and opportunity, the Department of BCA has consistently taken the lead in organizing technical and cultural events that go beyond textbooks and classrooms. One such flagship event is our inter-collegiate fest — ENIGMA*.
               </p>
               <p>
-                The name "ENIGMA*" represents our belief that every student has hidden potential waiting to be discovered, just like the luminous beauty of the enigma gem that reveals itself under the right light.
+                ENIGMA* began as a modest departmental event in 2018 and has since grown into one of the most anticipated inter-collegiate festivals in the region. What started as a single-day affair with just a few competitions has transformed into a vibrant two-day celebration of talent, innovation, and creativity.
               </p>
               <p>
-                Over the years, ENIGMA* has showcased thousands of talented students, hosted renowned guest speakers, and created countless memorable experiences. With each passing year, we strive to make the festival bigger, better, and more inclusive.
+              The name ENIGMA* reflects our core belief — that every student carries within them untapped potential, much like the enigma gem, which reveals its brilliance under the right light.  
               </p>
             </div>
           </motion.div>

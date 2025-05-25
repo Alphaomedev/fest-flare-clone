@@ -78,7 +78,7 @@ const Events = () => {
           </TabsList>
           
           <TabsContent value="day1" className="mt-0">
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Day 1: May 27, 2025</h2>
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">Day 1: May 29, 2025</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredDay1.map((event, index) => (
@@ -102,7 +102,7 @@ const Events = () => {
           </TabsContent>
           
           <TabsContent value="day2" className="mt-0">
-            <h2 className="text-2xl font-bold text-white mb-6 text-center">Day 2: May 28, 2025</h2>
+            <h2 className="text-2xl font-bold text-white mb-6 text-center">Day 2: May 30, 2025</h2>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredDay2.map((event, index) => (

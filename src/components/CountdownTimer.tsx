@@ -1,8 +1,8 @@
 
 import { useState, useEffect } from 'react';
 
-// Set the festival date (May 27, 2025)
-const FEST_DATE = new Date('2025-05-27T09:00:00').getTime();
+// Set the festival date (May 29, 2025)
+const FEST_DATE = new Date('2025-05-29T09:00:00').getTime();
 
 const CountdownTimer = () => {
   const [timeLeft, setTimeLeft] = useState({

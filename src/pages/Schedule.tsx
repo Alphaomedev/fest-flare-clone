@@ -55,7 +55,7 @@ const Schedule = () => {
           <div>
             <div className="mb-6 flex items-center">
               <Calendar className="mr-3 text-enigma-pink" size={24} />
-              <h2 className="text-2xl font-bold text-white">Day 1: May 27, 2025</h2>
+              <h2 className="text-2xl font-bold text-white">Day 1: May 29, 2025</h2>
             </div>
 
             <motion.ul 
@@ -83,7 +83,7 @@ const Schedule = () => {
           <div>
             <div className="mb-6 flex items-center">
               <Calendar className="mr-3 text-enigma-teal" size={24} />
-              <h2 className="text-2xl font-bold text-white">Day 2: May 28, 2025</h2>
+              <h2 className="text-2xl font-bold text-white">Day 2: May 30, 2025</h2>
             </div>
 
             <motion.ul 

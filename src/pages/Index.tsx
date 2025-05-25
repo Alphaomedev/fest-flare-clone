@@ -84,7 +84,7 @@ const Index = () => {
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">About ENIGMA*</h2>
               <p className="text-gray-300 mb-6">
-                ENIGMA* is the annual cultural and technical festival of SDM College, bringing together students from all over the region to showcase their talents, skills, and creativity.
+                ENIGMA* is the annual technical festival of BCA Department at SDM College, bringing together students from all over the uttar kannada region to showcase their talents, skills, and creativity.
               </p>
               <p className="text-gray-300 mb-6">
                 For two exciting days, our campus transforms into a hub of activities, competitions, and fun. From technical events like hackathons to cultural showcases, ENIGMA* has something for everyone.
