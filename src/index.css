@@ -42,6 +42,10 @@
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-background font-poppins text-foreground antialiased;
     background-image: linear-gradient(to bottom, rgba(23, 17, 35, 0.99), rgba(23, 17, 35, 0.99)), var(--tw-gradient-stops);
