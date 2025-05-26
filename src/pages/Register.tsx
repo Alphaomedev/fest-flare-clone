@@ -586,7 +586,7 @@ const Register = () => {
               <li>Please bring your college ID card for verification.</li>
               <li>For team events, all team members' details are required during registration.</li>
               <li>A confirmation email will be sent to your registered email address.</li>
-              <li>For any queries, contact us at <span className="text-enigma-pink">info@enigma.edu</span></li>
+              <li>For any queries, contact us at <span className="text-enigma-pink">visionariesassociationn@gmail.com</span></li>
             </ul>
           </div>
         </div>

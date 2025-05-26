@@ -137,32 +137,37 @@ Within this ecosystem of growth and opportunity, the Department of BCA has consi
             ENIGMA* is organized by a dedicated team of students and faculty members who work tirelessly to create an unforgettable experience. From event planning to logistics, our team handles every aspect of the festival with passion and precision.
           </p>
           
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 ">
             {[
               {
                 name: "Prof. Vandana Bhat",
-                role: "Faculty Coordinator",
-                image: "https://i.pravatar.cc/300?img=60"
+                role: "HOD of BCA Dept",
+                image: "https://ik.imagekit.io/i3rmsw3yv/vandana-maam.jpeg?updatedAt=1748272320687"
               },
               {
-                name: "Ravi devadiga",
-                role: "Student Coordinator",
-                image: "https://i.pravatar.cc/300?img=43"
-              },
-              {
-                name: "Raj Patel",
-                role: "Technical Head",
-                image: "https://i.pravatar.cc/300?img=12"
-              },
-              {
-                name: "Neha Singh",
+                name: "Prof. Prasanna Shet",
                 role: "Events Manager",
-                image: "https://i.pravatar.cc/300?img=33"
+                image: "https://ik.imagekit.io/i3rmsw3yv/prasana-sir.jpeg?updatedAt=1748272320594"
+              },
+              {
+                name: "Prof Subhramanya Bhat",
+                role: "Faculty Coordinator",
+                image: "https://ik.imagekit.io/i3rmsw3yv/subbu-sir.jpeg?updatedAt=1748272320598"
+              },
+              {
+                name: "Ravi Devadega",
+                role: "Student Coordinator",
+                image: "https://ik.imagekit.io/i3rmsw3yv/ravi.jpeg?updatedAt=1748272321038"
+              },
+              {
+                name: "Abhishek Naik",
+                role: "Technical Head",
+                image: "https://ik.imagekit.io/i3rmsw3yv/WhatsApp%20Image%202025-05-26%20at%208.31.38%20PM.jpeg?updatedAt=1748272321357"
               }
             ].map((member, index) => (
               <div 
                 key={index} 
-                className="text-center event-card rounded-lg overflow-hidden p-4"
+                className="text-center event-card rounded-lg overflow-hidden p-4 flex flex-col justify-items-center"
               >
                 <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4 border-2 border-enigma-pink">
                   <img 

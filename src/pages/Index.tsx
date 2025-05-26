@@ -115,7 +115,7 @@ const Index = () => {
               }}
             >
               <img 
-                src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1662&q=80" 
+                src="https://ik.imagekit.io/i3rmsw3yv/IMG_0681.HEIC?updatedAt=1748277500028" 
                 alt="College Fest" 
                 className="w-full h-full object-cover"
               />

@@ -73,15 +73,17 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start">
                 <MapPin size={20} className="text-enigma-pink mt-1 mr-3" />
-                <span className="text-gray-400">SDM College Campus, College Road, Main Street, City, State 123456</span>
+                <span className="text-gray-400">M.P.E.S's S.D.M College,
+Prabath Nagar
+Honnavar, 581334</span>
               </li>
               <li className="flex items-start">
                 <Mail size={20} className="text-enigma-pink mt-1 mr-3" />
-                <span className="text-gray-400">info@enigma.edu</span>
+                <span className="text-gray-400">visionariesassociationn@gmail.com</span>
               </li>
               <li className="flex items-start">
                 <Phone size={20} className="text-enigma-pink mt-1 mr-3" />
-                <span className="text-gray-400">+91 98765 43210</span>
+                <span className="text-gray-400">+91 87228 46337</span>
               </li>
             </ul>
           </div>

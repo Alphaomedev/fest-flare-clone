@@ -14,16 +14,24 @@ const day1Events: EventProps[] = [
     detailedDescription: "Join us for the grand opening of ENIGMA* Fest 2025! The event will be inaugurated by our college principal and distinguished guests. This marks the beginning of two days filled with exciting activities, competitions, and fun."
   },
   {
-    id: "talents-day",
-    title: "Talents Day",
-    time: "10:00 AM – 11:30 AM",
+    id: "quiz-competition",
+    title: "Quiz Competition",
+    time: "10:30 AM – 3:00 PM",
     mode: "Offline",
-    team: "Solo/Group",
-    openToAll: false,
+    team: "Team of 2",
+    openToAll: true,
     icon: "microphone",
-    description: "BCA Students Only - Showcase your talent through dance, music, or any performing art.",
-    detailedDescription: "Exclusive for BCA students! This is your opportunity to showcase your talents on stage. Whether you're a singer, dancer, musician, or have any other performing art talent, this is your time to shine. Each performer gets one event slot. Pre-registration required."
-  },
+    description: "A thrilling 4-round quiz contest open to all students. Team up and compete for cash prizes and certificates!",
+    detailedDescription: `Form a team of two and get ready to test your knowledge across general awareness, tech, logic, and visuals!
+
+The competition has 4 intense rounds including a written screening, toss-up challenges, visual puzzles, and a rapid recall finale.
+
+Open to all students. Registration fee: ₹30 per team. Winners get ₹1000, certificates, and a feature on our Insta page.
+
+Limited to 15–20 teams. Pre-registration required.`
+
+  }
+  ,
   {
     id: "video-shoot",
     title: "Video Shoot Competition",

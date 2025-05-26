@@ -198,6 +198,15 @@ const EventDetail = () => {
             </Card>
           )}
 
+          {/* Event Description */}
+          {event.detailedDescription && (
+            <Card className="bg-enigma-purple/30 border-enigma-purple/40 mb-10">
+              <CardContent className="pt-6">
+                <h3 className="text-xl font-semibold text-white mb-3">Detailed Description</h3>
+                <p className="text-gray-300 whitespace-pre-line">{event.detailedDescription}</p>
+              </CardContent>
+            </Card>
+          )}
           {/* Registration CTA */}
           <div className="text-center bg-gradient-to-r from-enigma-pink/10 to-enigma-teal/10 rounded-lg p-8">
             <h3 className="text-2xl font-bold text-white mb-4">Ready to Participate?</h3>
