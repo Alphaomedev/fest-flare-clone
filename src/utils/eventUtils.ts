@@ -28,7 +28,7 @@ The competition has 4 intense rounds including a written screening, toss-up chal
 
 Open to all students. Registration fee: ₹30 per team. Winners get ₹1000, certificates, and a feature on our Insta page.
 
-Limited to 15–20 teams. Pre-registration required.`
+Limited to 20–25 teams. Pre-registration required.`
 
   }
   ,
@@ -69,7 +69,45 @@ Limited to 15–20 teams. Pre-registration required.`
     openToAll: true,
     icon: "computer",
     description: "Day 1 Ideation - Develop tech solutions for chosen themes.",
-    detailedDescription: "Day 1 of our 2-day Hackathon starts with an online kickoff session where teams will receive their themes and begin ideating. Choose from exciting themes like Tech4Good, AI Tools, or Campus Hacks. Teams of 1-4 members will brainstorm solutions and prepare for Day 2's build phase. This event is open to all participants interested in technology and innovation."
+    detailedDescription: `Join us for a two-day hybrid hackathon designed to spark innovation!
+
+**Day 1 (Online)** starts at 12:00 PM with a kickoff via Google Meet. Teams will:
+- Get introduced and form connections.
+- Choose from 3 exciting themes:
+  1. **Tech4Good** – Tackle social/environmental problems.
+  2. **AI Tools** – Build something fun or useful using AI.
+  3. **Campus Hacks** – Solve campus-related issues.
+
+Teams will brainstorm and submit:
+- Their idea
+- A rough design/prototype
+by **10:00 PM** using a Google Form and GitHub/Drive link.
+
+**Day 2 (Offline)** begins at 10:00 AM at the venue. Teams will:
+- Build their working prototype (UI + basic logic)
+- Get mentor feedback mid-way
+- Finalize their build and submit by 2:00 PM
+
+🎥 **Final Submission Includes**:
+- A GitHub repo or Google Drive folder
+- A 1-minute demo video/screen recording
+- A proper README file with:
+  - Team Name
+  - Members & Roles
+  - Problem Statement
+  - Tech Stack
+  - Setup Instructions
+  - Short write-up
+
+🏆 Prizes:
+- 🥇 1st Prize: ₹3000 + Certificates + Social Media Feature
+- 🥈 2nd Prize: ₹1000 + Certificates
+- ⭐ Special Mentions: Best UI, Best Pitch, Most Original Idea
+
+
+### NOTE: all ai tools are allowed for this hackathon 
+
+Open to all students passionate about building real-world solutions through tech.`
   },
   {
     id: "free-fire",
@@ -120,10 +158,52 @@ const day2Events: EventProps[] = [
     id: "hackathon-day2",
     title: "Hackathon (Build Phase)",
     time: "10:00 AM – 3:00 PM",
+    mode: "Offline",
     openToAll: true,
+    team: "4 members",
+    regFee: "₹250/team",
+    prize: `₹4000 + Certificates`,
     icon: "computer",
     description: "Day 2 Build Phase - Implement your solutions and prepare for final presentations.",
-    detailedDescription: "This is Day 2 of our Hackathon where teams move from ideation to implementation. Teams will work in the Computer Lab or Projector Room to build their solutions. By the end of the session, each team needs to present a working UI with basic logic implementation and deliver a compelling 5-minute pitch. Judges will evaluate based on innovation, implementation, and presentation quality."
+    detailedDescription: `Join us for a two-day hybrid hackathon designed to spark innovation!
+
+**Day 1 (Online)** starts at 12:00 PM with a kickoff via Google Meet. Teams will:
+- Get introduced and form connections.
+- Choose from 3 exciting themes:
+  1. **Tech4Good** – Tackle social/environmental problems.
+  2. **AI Tools** – Build something fun or useful using AI.
+  3. **Campus Hacks** – Solve campus-related issues.
+
+Teams will brainstorm and submit:
+- Their idea
+- A rough design/prototype
+by **10:00 PM** using a Google Form and GitHub/Drive link.
+
+**Day 2 (Offline)** begins at 10:00 AM at the venue. Teams will:
+- Build their working prototype (UI + basic logic)
+- Get mentor feedback mid-way
+- Finalize their build and submit by 2:00 PM
+
+🎥 **Final Submission Includes**:
+- A GitHub repo or Google Drive folder
+- A 1-minute demo video/screen recording
+- A proper README file with:
+  - Team Name
+  - Members & Roles
+  - Problem Statement
+  - Tech Stack
+  - Setup Instructions
+  - Short write-up
+
+🏆 Prizes:
+- 🥇 1st Prize: ₹3000 + Certificates + Social Media Feature
+- 🥈 2nd Prize: ₹1000 + Certificates
+- ⭐ Special Mentions: Best UI, Best Pitch, Most Original Idea
+
+
+### NOTE: all ai tools are allowed for this hackathon 
+
+Open to all students passionate about building real-world solutions through tech.`
   },
   {
     id: "quiz-competition",
