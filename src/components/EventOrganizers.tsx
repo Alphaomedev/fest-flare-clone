@@ -11,9 +11,13 @@ interface Organizer {
   image?: string;
 }
 
-const EventOrganizers = () => {
-  // Sample organizers data - you can make this dynamic later
-  const organizers: Organizer[] = [
+interface EventOrganizersProps {
+  organizers?: Organizer[];
+}
+
+const EventOrganizers = ({ organizers }: EventOrganizersProps) => {
+  // Default organizers if none provided
+  const defaultOrganizers: Organizer[] = [
     {
       id: "1",
       name: "Dr. Prashant Panse",
@@ -30,6 +34,8 @@ const EventOrganizers = () => {
     }
   ];
 
+  const displayOrganizers = organizers || defaultOrganizers;
+
   return (
     <Card className="bg-enigma-purple/30 border-enigma-purple/40">
       <CardContent className="pt-6">
@@ -39,7 +45,7 @@ const EventOrganizers = () => {
         </div>
         
         <div className="space-y-4">
-          {organizers.map((organizer) => (
+          {displayOrganizers.map((organizer) => (
             <div 
               key={organizer.id}
               className="flex items-center p-4 bg-enigma-purple/20 rounded-lg border border-enigma-purple/30"
@@ -67,3 +73,4 @@ const EventOrganizers = () => {
 };
 
 export default EventOrganizers;
+export type { Organizer };

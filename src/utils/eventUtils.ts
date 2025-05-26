@@ -1,5 +1,13 @@
-
 import { EventProps } from "@/components/EventCard";
+
+// Define organizer type
+interface Organizer {
+  id: string;
+  name: string;
+  phone: string;
+  initials: string;
+  image?: string;
+}
 
 // Combined events data
 const day1Events: EventProps[] = [
@@ -11,7 +19,22 @@ const day1Events: EventProps[] = [
     openToAll: true,
     icon: "ribbon",
     description: "The official inauguration ceremony of the fest.",
-    detailedDescription: "Join us for the grand opening of ENIGMA* Fest 2025! The event will be inaugurated by our college principal and distinguished guests. This marks the beginning of two days filled with exciting activities, competitions, and fun."
+    detailedDescription: "Join us for the grand opening of ENIGMA* Fest 2025! The event will be inaugurated by our college principal and distinguished guests. This marks the beginning of two days filled with exciting activities, competitions, and fun.",
+    organizers: [
+      {
+        id: "1",
+        name: "Dr. Prashant Panse",
+        phone: "9977700651",
+        initials: "DPp",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=150&h=150&fit=crop&crop=face"
+      },
+      {
+        id: "2",
+        name: "Principal Office",
+        phone: "9876543210",
+        initials: "PO",
+      }
+    ]
   },
   {
     id: "quiz-competition",
@@ -28,8 +51,22 @@ The competition has 4 intense rounds including a written screening, toss-up chal
 
 Open to all students. Registration fee: ₹30 per team. Winners get ₹1000, certificates, and a feature on our Insta page.
 
-Limited to 20–25 teams. Pre-registration required.`
-
+Limited to 20–25 teams. Pre-registration required.`,
+    organizers: [
+      {
+        id: "3",
+        name: "Vishesh Singh",
+        phone: "9131186844",
+        initials: "VS",
+        image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=150&h=150&fit=crop&crop=face"
+      },
+      {
+        id: "4",
+        name: "Quiz Coordinator",
+        phone: "9876543211",
+        initials: "QC",
+      }
+    ]
   }
   ,
   {
@@ -43,7 +80,21 @@ Limited to 20–25 teams. Pre-registration required.`
     openToAll: false,
     icon: "video",
     description: "SDM Students Only - Create a short video showcasing SDM college.",
-    detailedDescription: "Exclusive for SDM students! Put your videography skills to the test by creating a short video that showcases our beloved SDM College. Teams of 2 members will have 4 hours to shoot and edit a video not exceeding 3 minutes in duration. The winning video will be featured on the college's official social media channels."
+    detailedDescription: "Exclusive for SDM students! Put your videography skills to the test by creating a short video that showcases our beloved SDM College. Teams of 2 members will have 4 hours to shoot and edit a video not exceeding 3 minutes in duration. The winning video will be featured on the college's official social media channels.",
+    organizers: [
+      {
+        id: "5",
+        name: "Media Team Lead",
+        phone: "9876543212",
+        initials: "MTL",
+      },
+      {
+        id: "6",
+        name: "Video Production Head",
+        phone: "9876543213",
+        initials: "VPH",
+      }
+    ]
   },
   {
     id: "craft-competition",
@@ -107,7 +158,21 @@ by **10:00 PM** using a Google Form and GitHub/Drive link.
 
 ### NOTE: all ai tools are allowed for this hackathon 
 
-Open to all students passionate about building real-world solutions through tech.`
+Open to all students passionate about building real-world solutions through tech.`,
+    organizers: [
+      {
+        id: "7",
+        name: "Tech Lead",
+        phone: "9876543214",
+        initials: "TL",
+      },
+      {
+        id: "8",
+        name: "Hackathon Coordinator",
+        phone: "9876543215",
+        initials: "HC",
+      }
+    ]
   },
   {
     id: "free-fire",
@@ -270,3 +335,6 @@ export const getFeaturedEvents = (): EventProps[] => {
     getEventById("quiz-competition") as EventProps,
   ];
 };
+
+// Export organizer type
+export type { Organizer };

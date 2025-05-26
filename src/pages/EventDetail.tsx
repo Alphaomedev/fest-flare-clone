@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -222,7 +221,7 @@ const EventDetail = () => {
 
           {/* Event Organizers */}
           <div className="mb-10">
-            <EventOrganizers />
+            <EventOrganizers organizers={event.organizers} />
           </div>
 
           {/* Registration CTA */}
