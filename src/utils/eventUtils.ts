@@ -1,13 +1,7 @@
 import { EventProps } from "@/components/EventCard";
 
 // Define organizer type
-interface Organizer {
-  id: string;
-  name: string;
-  phone: string;
-  initials: string;
-  image?: string;
-}
+
 
 // Combined events data
 const day1Events: EventProps[] = [
@@ -23,16 +17,17 @@ const day1Events: EventProps[] = [
     organizers: [
       {
         id: "1",
-        name: "Dr. Prashant Panse",
-        phone: "9977700651",
-        initials: "DPp",
+        name: "Ravi devadiga",
+        phone: "+91 87228 46337", 
+        initials: "RD",
         image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=150&h=150&fit=crop&crop=face"
       },
       {
-        id: "2",
-        name: "Principal Office",
-        phone: "9876543210",
-        initials: "PO",
+        id: "2", 
+        name: "Abhishek naik",
+        phone: "+91 734 901 7610",
+        initials: "AB",
+        image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=150&h=150&fit=crop&crop=face"
       }
     ]
   },
@@ -54,17 +49,18 @@ Open to all students. Registration fee: ₹30 per team. Winners get ₹1000, cer
 Limited to 20–25 teams. Pre-registration required.`,
     organizers: [
       {
-        id: "3",
-        name: "Vishesh Singh",
-        phone: "9131186844",
-        initials: "VS",
-        image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=150&h=150&fit=crop&crop=face"
+        id: "1",
+        name: "Ravi devadiga",
+        phone: "+91 87228 46337", 
+        initials: "RD",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=150&h=150&fit=crop&crop=face"
       },
       {
-        id: "4",
-        name: "Quiz Coordinator",
-        phone: "9876543211",
-        initials: "QC",
+        id: "2", 
+        name: "Abhishek naik",
+        phone: "+91 734 901 7610",
+        initials: "AB",
+        image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=150&h=150&fit=crop&crop=face"
       }
     ]
   }
@@ -85,13 +81,13 @@ Limited to 20–25 teams. Pre-registration required.`,
       {
         id: "5",
         name: "Media Team Lead",
-        phone: "9876543212",
+        phone: "+91 87228 46337",
         initials: "MTL",
       },
       {
         id: "6",
         name: "Video Production Head",
-        phone: "9876543213",
+        phone: "+91 87228 46337",
         initials: "VPH",
       }
     ]
@@ -163,13 +159,13 @@ Open to all students passionate about building real-world solutions through tech
       {
         id: "7",
         name: "Tech Lead",
-        phone: "9876543214",
+        phone: "+91 87228 46337",
         initials: "TL",
       },
       {
         id: "8",
         name: "Hackathon Coordinator",
-        phone: "9876543215",
+        phone: "+91 87228 46337",
         initials: "HC",
       }
     ]
@@ -337,4 +333,3 @@ export const getFeaturedEvents = (): EventProps[] => {
 };
 
 // Export organizer type
-export type { Organizer };

@@ -20,16 +20,16 @@ const EventOrganizers = ({ organizers }: EventOrganizersProps) => {
   const defaultOrganizers: Organizer[] = [
     {
       id: "1",
-      name: "Dr. Prashant Panse",
-      phone: "9977700651", 
-      initials: "DPp",
+      name: "Ravi devadiga",
+      phone: "+91 87228 46337", 
+      initials: "RD",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=150&h=150&fit=crop&crop=face"
     },
     {
       id: "2", 
-      name: "Vishesh Singh",
-      phone: "9131186844",
-      initials: "VS",
+      name: "Abhishek naik",
+      phone: "+91 734 901 7610",
+      initials: "AB",
       image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=150&h=150&fit=crop&crop=face"
     }
   ];

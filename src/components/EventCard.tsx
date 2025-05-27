@@ -3,6 +3,13 @@ import { Book, Clock, Calendar, Trophy, Users, DollarSign } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 
+interface Organizer {
+  id: string;
+  name: string;
+  phone: string;
+  initials: string;
+  image?: string;
+}
 export interface EventProps {
   id?: string;
   title: string;
@@ -17,6 +24,7 @@ export interface EventProps {
   icon: keyof typeof iconMapping;
   description?: string;
   detailedDescription?: string;
+  organizers?: Organizer[];
 }
 
 const iconMapping = {
