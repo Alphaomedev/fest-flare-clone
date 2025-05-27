@@ -32,40 +32,6 @@ const day1Events: EventProps[] = [
     ]
   },
   {
-    id: "quiz-competition",
-    title: "Quiz Competition",
-    time: "10:30 AM – 3:00 PM",
-    mode: "Offline",
-    team: "Team of 2",
-    openToAll: true,
-    icon: "microphone",
-    description: "A thrilling 4-round quiz contest open to all students. Team up and compete for cash prizes and certificates!",
-    detailedDescription: `Form a team of two and get ready to test your knowledge across general awareness, tech, logic, and visuals!
-
-The competition has 4 intense rounds including a written screening, toss-up challenges, visual puzzles, and a rapid recall finale.
-
-Open to all students. Registration fee: ₹30 per team. Winners get ₹1000, certificates, and a feature on our Insta page.
-
-Limited to 20–25 teams. Pre-registration required.`,
-    organizers: [
-      {
-        id: "1",
-        name: "Ravi devadiga",
-        phone: "+91 87228 46337", 
-        initials: "RD",
-        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=150&h=150&fit=crop&crop=face"
-      },
-      {
-        id: "2", 
-        name: "Abhishek naik",
-        phone: "+91 734 901 7610",
-        initials: "AB",
-        image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=150&h=150&fit=crop&crop=face"
-      }
-    ]
-  }
-  ,
-  {
     id: "video-shoot",
     title: "Video Shoot Competition",
     time: "10:00 AM – 2:00 PM",
@@ -196,15 +162,6 @@ Open to all students passionate about building real-world solutions through tech
 
 const day2Events: EventProps[] = [
   {
-    id: "formal-inauguration",
-    title: "Formal Inauguration",
-    time: "9:30 AM – 10:00 AM",
-    openToAll: true,
-    icon: "microphone",
-    description: "The official opening ceremony for the main day of the fest.",
-    detailedDescription: "Join us for the formal inauguration of ENIGMA* Fest's main day. The ceremony will feature addresses from college management, faculty coordinators, and student representatives. Everyone attending the fest is welcome to be part of this ceremonial beginning of our main fest day."
-  },
-  {
     id: "photography-contest",
     title: "Photography Contest",
     time: "9:00 AM – 2:30 PM",
@@ -276,20 +233,94 @@ Open to all students passionate about building real-world solutions through tech
     openToAll: true,
     icon: "quiz",
     description: "Test your knowledge across various categories in this exciting quiz.",
-    detailedDescription: "Put your knowledge to the test in this multi-round quiz competition! Teams of 2 will progress through a Written Quiz, followed by Toss-up questions, Visual rounds, and finally Rapid Recall for the finalists. Questions span a wide range of topics including current affairs, technology, pop culture, and academic subjects. The winning team takes home ₹1000 and certificates of excellence."
+    detailedDescription: "Put your knowledge to the test in this multi-round quiz competition! Teams of 2 will progress through a Written Quiz, followed by Toss-up questions, Visual rounds, and finally Rapid Recall for the finalists. Questions span a wide range of topics including current affairs, technology, pop culture, and academic subjects. The winning team takes home ₹1000 and certificates of excellence.",
+    organizers: [
+      {
+        id: "1",
+        name: "Ratan Naik",
+        phone: "+91 94818 01949", 
+        initials: "RN",
+        image: ""
+      },
+      {
+        id: "2", 
+        name: "Suraj Shet",
+        phone: "+91 63631 53166",
+        initials: "SS",
+        image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=150&h=150&fit=crop&crop=face"
+      }
+    ]
   },
-  {
-    id: "canva-design",
-    title: "Canva Design Challenge",
-    time: "10:30 AM – 1:30 PM",
-    team: "2 members",
-    regFee: "₹50/team",
-    prize: "₹1000 + Certificates",
-    openToAll: true,
-    icon: "canva",
-    description: "Showcase your graphic design skills using Canva.",
-    detailedDescription: "Showcase your graphic design prowess in this Canva Design Challenge! Teams of 2 will work together to create engaging designs based on themes revealed at the event. Participants will have 3 hours to conceptualize and execute their designs. Judging criteria include creativity, relevance to theme, visual appeal, and technical execution. Winners will receive cash prizes and certificates recognizing their design excellence."
-  },
+  
+{
+  id: "canva-design-challenge",
+  title: "Canva Design Challenge",
+  time: "10:30 AM – 1:30 PM",
+  mode: "Offline (Requires Laptop)",
+  openToAll: true,
+  team: "2 members (duo)",
+  regFee: "₹50 per team",
+  prize: "₹1000 + Certificates + Feature on College Page",
+  icon: "canva",
+  description: "Test your creativity and design skills using Canva. A theme will be revealed on the spot!",
+  detailedDescription: `Join the **Canva Design Challenge**, a creative design competition aimed at testing participants' ability to create visually appealing and effective designs using Canva. You will be provided with a theme on the spot and will have to design within a time limit.
+
+**Event Details:**
+- **Date:** Day 2 of the Fest
+- **Time:** 10:30 AM – 1:30 PM
+- **Venue:** [bca Lab]
+- **Team Size:** 2 members (duo)
+- **Registration Fee:** ₹50 per team
+- **Registration Type:** On-site (or Pre-registration if preferred)
+- **Theme:** To be Announced at the start of the event
+- **Volunteers:** 5 are needed for this event.
+
+**Participation Guidelines:**
+- Each team must consist of 2 members.
+- Designs must be made **only using Canva** (browser or app).
+- Participants must bring their own laptops or use college systems (if available).
+- Internet connectivity should be ensured prior to the event.
+- No use of AI tools outside Canva’s native AI features is allowed.
+- Each team is allowed to submit only one design.
+- Plagiarism or copying existing templates directly without creativity will result in disqualification.
+
+**Objective:**
+Create a compelling and theme-based design using Canva that effectively conveys the message, aesthetics, and purpose. The theme will test creativity, layout sense, design balance, and clarity.
+
+**Schedule:**
+| Time | Activity |
+| ------ | ------ |
+| 10:30 AM | Reporting and Attendance |
+| 10:45 AM | Theme Reveal & Rules Briefing |
+| 11:00 AM | Design Time Begins |
+| 1:00 PM | Submission Deadline |
+| 1:00 – 1:30 PM | Judging and Feedback |
+| 1:30 PM | Winners Announcement & Wrap-up |
+
+**Judging Criteria** (Total: 100 points):
+- **Creativity & Originality:** Uniqueness and innovation in design (25 points)
+- **Theme Relevance:** How well the design reflects the assigned theme (25 points)
+- **Visual Appeal:** Aesthetic and color usage, layout, and spacing (20 points)
+- **Clarity of Message:** How clearly the message is communicated (15 points)
+- **Technical Execution:** Use of design tools, typography, and composition (15 points)
+
+**Prizes:**
+- **1st Prize:** ₹1000 + Certificate + Feature on College Page
+- **2nd Prize:** Certificate + Goodie
+- All participants receive an E-certificate of participation. The general list mentions a prize of ₹500.
+
+**Judging Panel:** Judges will include design faculty and experienced UI/UX or digital media professionals. These are still to be finalised.
+
+**Checklist for Participants:**
+- Laptop / Device with Canva access
+- Stable internet connection
+- Canva account (preferably logged in before event)
+- Charger / Power backup
+- Creativity and good vibes 😄
+
+The Canva Design Challenge is open to all.
+`
+},
   {
     id: "game-stalls",
     title: "Game Stalls",
