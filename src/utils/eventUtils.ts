@@ -46,15 +46,15 @@ const day1Events: EventProps[] = [
     organizers: [
       {
         id: "5",
-        name: "Media Team Lead",
-        phone: "+91 87228 46337",
-        initials: "MTL",
+        name: "Kalpit Bhandari",
+        phone: "+91 70221 05358",
+        initials: "KB",
       },
       {
         id: "6",
-        name: "Video Production Head",
-        phone: "+91 87228 46337",
-        initials: "VPH",
+        name: "Sunaina Baadkar",
+        phone: "+91 74113 76253",
+        initials: "SN",
       }
     ]
   },
@@ -123,16 +123,16 @@ by **10:00 PM** using a Google Form and GitHub/Drive link.
 Open to all students passionate about building real-world solutions through tech.`,
     organizers: [
       {
-        id: "7",
-        name: "Tech Lead",
-        phone: "+91 87228 46337",
-        initials: "TL",
+        id: "1",
+        name: "Pranav Bhat",
+        phone: "+91 70163 09456",
+        initials: "PB",
       },
       {
-        id: "8",
-        name: "Hackathon Coordinator",
-        phone: "+91 87228 46337",
-        initials: "HC",
+        id: "2",
+        name: "Ebenezer Dsouza",
+        phone: "+91 84314 53818",
+        initials: "ED",
       }
     ]
   },
@@ -141,12 +141,38 @@ Open to all students passionate about building real-world solutions through tech
     title: "Free Fire Tournament",
     time: "1:30 PM – 3:00 PM",
     team: "Squad of 4",
-    regFee: "₹100/team",
-    prize: "₹2000 + Trophy",
+    regFee: "₹50/team",
+    prize: "₹2000 (winner), ₹500(runner up)",
     openToAll: false,
     icon: "gamepad",
     description: "SDM Students Only - Battle in teams in this exciting esports tournament.",
-    detailedDescription: "Exclusive for SDM students! Form your squad of 4 and compete in this thrilling Free Fire tournament. The format includes 2 pool matches followed by 1 final Clash Squad (Best of 8). Only registered teams can participate. The winning squad will receive ₹2000 cash prize and a stunning trophy!"
+    detailedDescription: `- Exclusive for SDM students! Form your squad of 4 and compete in this thrilling Free Fire tournament.
+
+      - The format includes 2 pool matches followed by 1 final Clash Squad (Best of 8).
+
+      - Only registered teams can participate. ( contact organisers or visit bca lab 1 to register on 28th)  
+      
+      - The winning squad will receive ₹2500 cash prize and a stunning trophy!`,
+    organizers: [
+      {
+        id: "1",
+        name: "Humam Sab",
+        phone: "+91 97413 37316",
+        initials: "HS",
+      },
+      {
+        id: "2",
+        name: "Abhishek Naik",
+        phone: "+91 73490 17610",
+        initials: "AN",
+      },
+      {
+        id: "3",
+        name: "Ebenezer Dsouza",
+        phone: "+91 84314 53818",
+        initials: "ED",
+      }
+    ]
   },
   {
     id: "treasure-hunt",
@@ -233,7 +259,7 @@ Open to all students passionate about building real-world solutions through tech
     openToAll: true,
     icon: "quiz",
     description: "Test your knowledge across various categories in this exciting quiz.",
-    detailedDescription: "Put your knowledge to the test in this multi-round quiz competition! Teams of 2 will progress through a Written Quiz, followed by Toss-up questions, Visual rounds, and finally Rapid Recall for the finalists. Questions span a wide range of topics including current affairs, technology, pop culture, and academic subjects. The winning team takes home ₹1000 and certificates of excellence.",
+    detailedDescription: "",
     organizers: [
       {
         id: "1",
@@ -319,7 +345,23 @@ Create a compelling and theme-based design using Canva that effectively conveys 
 - Creativity and good vibes 😄
 
 The Canva Design Challenge is open to all.
-`
+`,
+organizers: [
+  {
+    id: "1",
+    name: "Soori Naik",
+    phone: "+91 93532 80426", 
+    initials: "SN",
+    image: ""
+  },
+  {
+    id: "2", 
+    name: "Ravi Naik",
+    phone: "+91 63638 37948",
+    initials: "SS",
+    image: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?w=150&h=150&fit=crop&crop=face"
+  }
+]
 },
   {
     id: "game-stalls",
