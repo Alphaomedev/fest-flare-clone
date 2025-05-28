@@ -74,7 +74,7 @@ const day1Events: EventProps[] = [
   {
     id: "hackathon-day1",
     title: "Hackathon: Tech for Tomorrow",
-    time: "12:00 AM (Online via Google Meet)",
+    time: "12:00 PM (Online via Google Meet)",
     mode: "Online & Offline",
     team: "1-4 members",
     regFee: "₹250/team",
