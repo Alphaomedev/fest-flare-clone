@@ -120,7 +120,10 @@ by **10:00 PM** using a Google Form and GitHub/Drive link.
 
 ### NOTE: all ai tools are allowed for this hackathon 
 
-Open to all students passionate about building real-world solutions through tech.`,
+Open to all students passionate about building real-world solutions through tech.
+
+## join whatsapp group for notifications : https://chat.whatsapp.com/FKLZuzfP8JiINMBgRumpYo`,
+
     organizers: [
       {
         id: "1",
