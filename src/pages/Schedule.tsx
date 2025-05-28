@@ -14,7 +14,6 @@ const Schedule = () => {
   ];
 
   const day2Schedule = [
-    { time: "9:30 AM - 10:00 AM", event: "Formal Inauguration", location: "Main Stage" },
     { time: "9:00 AM - 2:30 PM", event: "Photography Contest", location: "Campus Grounds" },
     { time: "10:00 AM - 3:00 PM", event: "Hackathon (Build Phase)", location: "Computer Lab" },
     { time: "10:30 AM - 3:00 PM", event: "Quiz Competition", location: "Seminar Hall" },

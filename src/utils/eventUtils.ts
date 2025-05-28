@@ -152,7 +152,9 @@ Open to all students passionate about building real-world solutions through tech
 
       - Only registered teams can participate. ( contact organisers or visit bca lab 1 to register on 28th)  
       
-      - The winning squad will receive ₹2500 cash prize and a stunning trophy!`,
+      - The winning squad will receive ₹2500 cash prize and a stunning trophy!
+      
+      ## join whatsapp group for futher details : https://chat.whatsapp.com/IEN9Q2FFfXE514rAedRuag `,
     organizers: [
       {
         id: "1",
@@ -247,7 +249,9 @@ by **10:00 PM** using a Google Form and GitHub/Drive link.
 
 ### NOTE: all ai tools are allowed for this hackathon 
 
-Open to all students passionate about building real-world solutions through tech.`
+Open to all students passionate about building real-world solutions through tech.
+
+## join whatsapp group for notifications : https://chat.whatsapp.com/FKLZuzfP8JiINMBgRumpYo`,
   },
   {
     id: "quiz-competition",
@@ -255,11 +259,20 @@ Open to all students passionate about building real-world solutions through tech
     time: "10:30 AM – 3:00 PM",
     team: "2 members",
     regFee: "₹30/team",
-    prize: "₹1000 + Certificates",
+    prize: "₹1500 + Certificates",
     openToAll: true,
     icon: "quiz",
     description: "Test your knowledge across various categories in this exciting quiz.",
-    detailedDescription: "",
+    detailedDescription: `Form a team of two and get ready to test your knowledge across general awareness, tech, logic, and visuals!
+
+The competition has 4 intense rounds including a written screening, toss-up challenges, visual puzzles, and a rapid recall finale.
+
+Open to all students. Registration fee: ₹30 per team. Winners get ₹1000, certificates, and a feature on our Insta page.
+
+Limited to 15–20 teams. Pre-registration required.
+
+join whatsapp group for notifications : https://chat.whatsapp.com/FN9sTra4YpN4FWxsW7iSkp
+`,
     organizers: [
       {
         id: "1",
