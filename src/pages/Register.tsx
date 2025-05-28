@@ -44,7 +44,8 @@ const Register = () => {
     { id: "photography", name: "Photography Contest", fee: "₹50", isTeamEvent: false },
     { id: "quiz", name: "Quiz Competition", fee: "₹30/team", isTeamEvent: true, maxTeamSize: 2 },
     { id: "canva", name: "Canva Design Challenge", fee: "₹50/team", isTeamEvent: true, maxTeamSize: 2 },
-    { id: "Freefire", name: "Free Fire tournament", fee: "₹50/team", isTeamEvent: true, maxTeamSize: 4 },
+    { id: "Freefire", name: "Free Fire tournament", fee: "₹100/team", isTeamEvent: true, maxTeamSize: 4 },
+    { id: "craft", name: "Craft competetion", fee: "₹30/team", isTeamEvent: true, maxTeamSize: 3 },
     { id: "games", name: "Game Stalls", fee: "Pay per game", isTeamEvent: false },
     { id: "food", name: "Food Stalls", fee: "Pay per game", isTeamEvent: false },
   ];
