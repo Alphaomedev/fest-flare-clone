@@ -75,7 +75,30 @@ const day1Events: EventProps[] = [
     openToAll: false,
     icon: "scissors",
     description: "SDM Students Only - Create art using recycled materials or festive decorations.",
-    detailedDescription: "Exclusive for SDM students! Unleash your creativity in this craft competition where you can choose between creating art using recycled materials or making festive decorations. Participants can work individually or in teams. All materials must be brought by participants. The most creative piece wins an exciting gift hamper!"
+    detailedDescription: `Exclusive for SDM students! 
+    Unleash your creativity in this craft competition where you can choose between creating art using recycled materials or making festive decorations.
+    Participants can work individually or in teams. 
+    All materials must be brought by participants. 
+    The most creative piece wins !
+    
+    ## whatsapp group for futher details : https://chat.whatsapp.com/DNCQygg7bd33OVbUKRJZIp
+    `
+    ,
+    organizers: [
+      {
+        id: "9",
+        name: "Amrutha Raikar",
+        phone: "+91 94491 27492", 
+        initials: "AR",
+      }, 
+      {
+        id: "10",
+        name: "Ravi devadiga",
+        phone: "+91 87228 46337", 
+        initials: "RD",
+        image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=150&h=150&fit=crop&crop=face"
+      },
+    ]
   },
   {
     id: "hackathon-day1",
