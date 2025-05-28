@@ -208,7 +208,7 @@ const day2Events: EventProps[] = [
     openToAll: true,
     team: "4 members",
     regFee: "₹250/team",
-    prize: `₹4000 + Certificates`,
+    prize: `₹3000 + Certificates`,
     icon: "computer",
     description: "Day 2 Build Phase - Implement your solutions and prepare for final presentations.",
     detailedDescription: `Join us for a two-day hybrid hackathon designed to spark innovation!
