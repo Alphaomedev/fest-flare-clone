@@ -22,7 +22,7 @@ const About = () => {
             className="rounded-lg overflow-hidden shadow-xl shadow-enigma-purple/20"
           >
             <img 
-              src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" 
+              src="https://ik.imagekit.io/i3rmsw3yv/WhatsApp%20Image%202025-05-28%20at%2011.55.13%20AM.jpeg?updatedAt=1748413805039" 
               alt="College Fest" 
               className="w-full h-full object-cover"
             />
