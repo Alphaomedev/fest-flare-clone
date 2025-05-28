@@ -42,7 +42,13 @@ const day1Events: EventProps[] = [
     openToAll: false,
     icon: "video",
     description: "SDM Students Only - Create a short video showcasing SDM college.",
-    detailedDescription: "Exclusive for SDM students! Put your videography skills to the test by creating a short video that showcases our beloved SDM College. Teams of 2 members will have 4 hours to shoot and edit a video not exceeding 3 minutes in duration. The winning video will be featured on the college's official social media channels.",
+    detailedDescription: `Exclusive for SDM students! 
+    Put your videography skills to the test by creating a short video that showcases our beloved SDM College. 
+    Teams of 2 members will have 4 hours to shoot and edit a video not exceeding 3 minutes in duration. 
+    
+    submission on 29th 8pm to kalpit +91 70221 05358
+
+    ## join whatsapp group for futher details : https://chat.whatsapp.com/LUNPx3Hs2YwL1xUiASeZPg`,
     organizers: [
       {
         id: "5",
@@ -144,7 +150,7 @@ Open to all students passionate about building real-world solutions through tech
     title: "Free Fire Tournament",
     time: "1:30 PM – 3:00 PM",
     team: "Squad of 4",
-    regFee: "₹50/team",
+    regFee: "₹100/team",
     prize: "₹2000 (winner), ₹500(runner up)",
     openToAll: false,
     icon: "gamepad",
@@ -201,7 +207,12 @@ const day2Events: EventProps[] = [
     openToAll: true,
     icon: "camera",
     description: "Capture the essence of the fest through your lens.",
-    detailedDescription: "Calling all photography enthusiasts! Capture the vibrant moments of our fest through your creative lens. Participants need to submit 5 photographs based on the themes 'Capture the Fest' or 'Candid Campus'. The winning entries will not only receive cash prizes but also be featured on our official Instagram handle!"
+    detailedDescription: `Calling all photography enthusiasts! Capture the vibrant moments of our fest through your creative lens. Participants need to submit 5 photographs based on the themes 'Capture the Fest' or 'Candid Campus'. 
+    
+    The winning entries will not only receive cash prizes !
+    
+    whatsapp group for futher details : https://chat.whatsapp.com/HugMCI9Nuzv1LGC4KPUZTq
+    `
   },
   {
     id: "hackathon-day2",
